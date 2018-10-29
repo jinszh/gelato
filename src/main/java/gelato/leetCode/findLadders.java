@@ -17,7 +17,7 @@ public class findLadders {
             boolean [] visited = new boolean[words.size()];
             for (int i = 0; i < words.size(); i++) {
                 visited[i] = false;
-                pars.add(new HashSet<>());
+                pars.add(new HashSet<Integer>());
                 edges[i][i] = false;
                 for (int j = i + 1; j < words.size(); j++) {
                     if (isTransable(words.get(i), words.get(j))) {
