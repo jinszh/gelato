@@ -3,6 +3,9 @@ package gelato.util;
 import gelato.model.ListNode;
 import gelato.model.TreeNode;
 
+import java.awt.*;
+import java.util.ArrayList;
+
 public class Util {
     public static ListNode getTestListNode(int [] data){
         ListNode head = null;
@@ -17,6 +20,21 @@ public class Util {
             }
         }
         return head;
+    }
+
+    public static Point[] toPointList(String vals){
+        Point [] re = null;
+        ArrayList<Point> pointList = new ArrayList<Point>();
+        String [] ps = vals.split("],\\[");
+        re = new Point[ps.length];
+        for (String s: ps
+             ) {
+            String si = s.replace("[", "");
+            si = si.replace("]", "");
+            String [] vs = si.split(",");
+            pointList.add(new Point(Integer.parseInt(vs[0]), Integer.parseInt(vs[1])));
+        }
+        return pointList.toArray(re);
     }
 
     public static TreeNode getTestTree(Integer [] data){
