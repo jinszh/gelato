@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.awt.*;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -229,6 +230,14 @@ public class LeetTests {
     }
 
     @Test
+    public void testFindMin() {
+        findMin m = new findMin();
+        int v = m.findMin(new int[]{3,3,3,3,3,3,3,0,3,3});
+        print(v);
+    }
+
+
+    @Test
     public void testPostOrder() {
         postorderTraversal m = new postorderTraversal();
         List<Integer> v = m.postorderTraversal(Util.getTestTree(new Integer[]{1}));
@@ -237,10 +246,12 @@ public class LeetTests {
 
     @Test
     public void testMaxPoints() {
+        double dd = 11.3;
+
         maxPoints m = new maxPoints();
         int a = m.maxPoints(Util.toPointList("[[[0,0],[94911151,94911150],[94911152,94911151]]]"));
         //int a = m.maxPoints(Util.toPointList("[[-1,-1],[-1,-1],[-1,-1],[2,3],[4,3]]"));
-        print(a);
+        print(dd);
     }
 
     private static void print(Object v){

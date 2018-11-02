@@ -59,6 +59,13 @@ public class Util {
         return root;
     }
 
+    //求最大公约数
+    public static int generateGCD(int a,int b){
+        if (b==0) return a;
+        else return generateGCD(b,a%b);
+
+    }
+
     public static void printListNode( ListNode n){
         while (n != null) {
             System.out.print(n.val + ",");

@@ -1,15 +1,14 @@
 package gelato.leetCode;
 
 import java.awt.*;
-import java.math.BigDecimal;
 
 public class maxPoints {
     public int maxPoints(Point[] points) {
-        BigDecimal[][] slope;
+        Double [][] slope;
         int n = 0;
         if(points != null && points.length > 0) {
             n = points.length > 1 ? 2 : 1;
-            slope = new BigDecimal[points.length][points.length];
+            slope = new Double[points.length][points.length];
             boolean [][] contained = new boolean[points.length][points.length];
             for (int i = 0; i < points.length; i++) {
                 for (int j = i + 1; j < points.length; j++) {
@@ -17,10 +16,10 @@ public class maxPoints {
                         if(points[i].x == points[j].x){
                             slope[i][j] = null;
                         }else {
-                            slope[i][j] = BigDecimal.;
+                            slope[i][j] = Double.MAX_VALUE;
                         }
                     } else {
-                        slope[i][j] = BigDecimal.valueOf ((points[i].x - points[j].x) / (points[i].y - points[j].y));
+                        slope[i][j] = (double) (points[i].x - points[j].x) / (points[i].y - points[j].y);
                     }
                     contained[i][j] = false;
                 }
@@ -38,7 +37,7 @@ public class maxPoints {
                     }else {
                         int cur = base + 1;
                         for (int k = j + 1; k < points.length; k++) {
-                            if (slope[i][k] == null || slope[i][j].compareTo(slope[i][k]) == 0) {
+                            if (slope[i][k] == null || Math.abs(slope[i][j] - slope[i][k]) < 10E-20) {
                                 cur++;
                        //         contained[j][k] = true;
                             }
