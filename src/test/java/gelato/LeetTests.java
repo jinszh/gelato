@@ -12,7 +12,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.awt.*;
-import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -230,14 +229,6 @@ public class LeetTests {
     }
 
     @Test
-    public void testFindMin() {
-        findMin m = new findMin();
-        int v = m.findMin(new int[]{3,3,3,3,3,3,3,0,3,3});
-        print(v);
-    }
-
-
-    @Test
     public void testPostOrder() {
         postorderTraversal m = new postorderTraversal();
         List<Integer> v = m.postorderTraversal(Util.getTestTree(new Integer[]{1}));
@@ -246,14 +237,31 @@ public class LeetTests {
 
     @Test
     public void testMaxPoints() {
-        double dd = 11.3;
-
         maxPoints m = new maxPoints();
-        int a = m.maxPoints(Util.toPointList("[[[0,0],[94911151,94911150],[94911152,94911151]]]"));
-        //int a = m.maxPoints(Util.toPointList("[[-1,-1],[-1,-1],[-1,-1],[2,3],[4,3]]"));
-        print(dd);
+        int a = m.maxPoints(Util.toPointList("[[-54,-297],[-36,-222],[3,-2],[30,53],[-5,1]" +
+                ",[-36,-222],[0,2],[1,3],[6,-47],[0,4],[2,3],[5,0]" +
+                ",[48,128],[24,28],[0,-5],[48,128],[-12,-122],[-54,-297]" +
+                ",[-42,-247],[-5,0],[2,4],[0,0],[54,153],[-30,-197],[4,5]" +
+                ",[4,3],[-42,-247],[6,-47],[-60,-322],[-4,-2],[-18,-147]" +
+                ",[6,-47],[60,178],[30,53],[-5,3],[-42,-247],[2,-2],[12,-22]" +
+                ",[24,28],[0,-72],[3,-4],[-60,-322],[48,128],[0,-72],[-5,3]" +
+                ",[5,5],[-24,-172],[-48,-272],[36,78],[-3,3]]"));
+        print(a);
     }
 
+    @Test
+    public void testlengthO() {
+        lengthOfLongestSubstringTwoDistinct m = new lengthOfLongestSubstringTwoDistinct();
+        int a = m.lengthOfLongestSubstringTwoDistinct("cdaba");
+        print(a);
+    }
+
+    @Test
+    public void testMaxGap() {
+        maximumGap m = new maximumGap();
+        int a = m.maximumGap(new int[]{1,4,0,9});
+        print(a);
+    }
     private static void print(Object v){
         if(v instanceof List){
             for(Object o : (List)v){
