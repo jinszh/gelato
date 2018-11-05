@@ -5,8 +5,13 @@ import gelato.model.TreeNode;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Util {
+    public static Long timer;
+    public static ReentrantLock timerLock = new ReentrantLock();
     public static ListNode getTestListNode(int [] data){
         ListNode head = null;
         ListNode prev = null;
@@ -35,6 +40,20 @@ public class Util {
             pointList.add(new Point(Integer.parseInt(vs[0]), Integer.parseInt(vs[1])));
         }
         return pointList.toArray(re);
+    }
+
+    public static void checkTime(){
+        print("now execution time: " + (new Date().getTime() - timer));
+    }
+
+    public static void print(Object v){
+        if(v instanceof java.util.List){
+            for(Object o : (List)v){
+                print(o);
+            }
+        }else {
+            System.out.println(v);
+        }
     }
 
     public static TreeNode getTestTree(Integer [] data){
