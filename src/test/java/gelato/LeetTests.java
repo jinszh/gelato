@@ -230,12 +230,11 @@ public class LeetTests {
     }
 
     @Test
-    public void testFindMin() {
-        findMin m = new findMin();
-        int v = m.findMin(new int[]{3,3,3,3,3,3,3,0,3,3});
+    public void testcalculateMinimumHP() {
+        calculateMinimumHP m = new calculateMinimumHP();
+        int v = m.calculateMinimumHP(Util.getTwoDMatrix("[[100]]"));
         print(v);
     }
-
 
     @Test
     public void testPostOrder() {

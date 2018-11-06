@@ -66,6 +66,22 @@ public class Util {
 
     }
 
+    public static int[][] getTwoDMatrix(String in) {
+        String[] ods = in.split("],\\[");
+        int[][] res = new int[ods.length][];
+        int i = 0;
+        for (String s : ods) {
+            String s2 = s.replace("[", "").replace("]", "");
+            String[] items = s2.split(",");
+            res[i] = new int[items.length];
+            for (int j = 0; j < items.length; j++) {
+                res[i][j] = Integer.parseInt(items[j]);
+            }
+            i++;
+        }
+        return res;
+    }
+
     public static void printListNode( ListNode n){
         while (n != null) {
             System.out.print(n.val + ",");
