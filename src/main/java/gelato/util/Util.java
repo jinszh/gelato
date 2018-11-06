@@ -56,6 +56,15 @@ public class Util {
         }
     }
 
+    public static int [] getOneDArray(String s){
+        String [] items = s.replace("[","").replace("]", "").split(",");
+        int [] array = new int[items.length];
+        for(int i = 0; i< items.length; i++){
+            array[i] = Integer.parseInt(items[i]);
+        }
+        return array;
+    }
+
     public static TreeNode getTestTree(Integer [] data){
         TreeNode root = null;
         TreeNode [] nodes;
