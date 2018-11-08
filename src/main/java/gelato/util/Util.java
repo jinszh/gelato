@@ -4,7 +4,9 @@ import gelato.model.ListNode;
 import gelato.model.TreeNode;
 
 import java.awt.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
@@ -50,9 +52,14 @@ public class Util {
         if(v instanceof java.util.List){
             for(Object o : (List)v){
                 print(o);
+                print("\n");
             }
-        }else {
-            System.out.println(v);
+        }else if(v instanceof int[]){
+            for(Object o : (int[])v){
+                print(o + " ");
+            }
+        } else{
+            System.out.print(v);
         }
     }
 
@@ -61,6 +68,15 @@ public class Util {
         int [] array = new int[items.length];
         for(int i = 0; i< items.length; i++){
             array[i] = Integer.parseInt(items[i]);
+        }
+        return array;
+    }
+
+    public static String [] get1dStr(String s) {
+        String[] items = s.replace("[", "").replace("]", "").split(",");
+        String[] array = new String[items.length];
+        for (int i = 0; i < items.length; i++) {
+            array[i] = items[i].replace("\"","").replace("'","").trim();
         }
         return array;
     }
@@ -95,20 +111,53 @@ public class Util {
     }
 
     public static int[][] getTwoDMatrix(String in) {
-        String[] ods = in.split("],\\[");
-        int[][] res = new int[ods.length][];
+        String[][] dss = get2DObj(in);
+        int [][] inss = new int[dss.length][];
+        int i = 0;
+        for (String [] s: dss) {
+            int j = 0;
+            inss[i] = new int[s.length];
+            for (String ss : s ) {
+                inss[i][j++] = Integer.parseInt(ss);
+            }
+            i++;
+        }
+        return inss;
+    }
+
+    public static <T> T[][] getTwoDMatrix(String in, Class clazz) {
+        String[][] dss = get2DObj(in);
+        T[][] inss = null;
+        if (dss != null && dss.length > 0) {
+            inss = (T[][]) Array.newInstance(clazz, dss.length, dss[0].length);
+            int i = 0;
+            for (String[] s : dss) {
+                int j = 0;
+                for (String ss : s) {
+                    inss[i][j++] = (T) (Character) ss.charAt(0);
+                }
+                i++;
+            }
+        }
+        return inss;
+    }
+
+    public static String[][] get2DObj(String in){
+        String[] ods = in.replace("\n","").split("]\\s*,\\s*\\[");
+        String[][] res = new String[ods.length][];
         int i = 0;
         for (String s : ods) {
             String s2 = s.replace("[", "").replace("]", "");
             String[] items = s2.split(",");
-            res[i] = new int[items.length];
+            res[i] = new String[items.length];
             for (int j = 0; j < items.length; j++) {
-                res[i][j] = Integer.parseInt(items[j]);
+                items[j] = items[j].replace("'","").replace("\"", "").trim();
+                res[i][j] = items[j];
             }
             i++;
         }
         return res;
-    }
+    };
 
     public static void printListNode( ListNode n){
         while (n != null) {
