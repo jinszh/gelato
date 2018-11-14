@@ -37,6 +37,48 @@ public class lee2 extends LeetTests {
         Util.print(v);
     }
 
+
+    @Test
+    public void testCalculate() {
+        calculate c = new calculate();
+        int v = c.calculate("(1+(4+5+2)-3)+(6+8)");
+        Util.print(v);
+    }
+
+    @Test
+    public void teststrobogrammaticInRange() {
+        strobogrammaticInRange c = new strobogrammaticInRange();
+     //   strobe2 c = new strobe2();
+        int v = c.strobogrammaticInRange("0", "100000000000000");
+       // int v = c.strobogrammaticInRange("50", "100");
+        Util.print(v);
+    }
+
+    @Test
+    public void testPaintHouse2() {
+        PaintHouse2 c = new PaintHouse2();
+        //   strobe2 c = new strobe2();
+        int v = c.minCostII(Util.getTwoDMatrix("[[16,9,20,8],[8,18,8,12]" +
+                ",[1,16,2,5],[3,4,16,3],[3,16,9,8],[6,14,18,13],[13,2,4,19]" +
+                ",[15,12,13,7],[5,5,2,14],[9,17,12,6]" +
+                ",[17,14,6,17],[14,3,19,11],[6,19,12,1],[7,2,12,12],[9,4,1,11]]"));
+        // int v = c.strobogrammaticInRange("50", "100");
+        Util.print(v);
+    }
+
+    @Test
+    public void testAlienDict() {
+        AlienDict c = new AlienDict();
+        String v = c.alienOrder(Util.get1dStr("[\n" +
+                "  \"wrt\",\n" +
+                "  \"wrf\",\n" +
+                "  \"er\",\n" +
+                "  \"ett\",\n" +
+                "  \"rftt\"\n" +
+                "]"));
+        Util.print(v);
+    }
+
     @Test
     public void testlongestValidParentheses() {
         findWords f = new findWords();
