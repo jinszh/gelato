@@ -1,16 +1,11 @@
 package gelato;
 
-import com.sun.deploy.util.ArrayUtil;
 import gelato.leet2.*;
 import gelato.leet2.shortestPalindrome;
-import gelato.leetCode.longestValidParentheses;
 import gelato.util.Trie;
 import gelato.util.Util;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -77,6 +72,25 @@ public class lee2 extends LeetTests {
                 "  \"rftt\"\n" +
                 "]"));
         Util.print(v);
+    }
+
+    @Test
+    public void testClosetK() {
+        ClosetBST closetBST = new ClosetBST();
+        List<Integer> l = closetBST.closestKValues(Util.getTestTree(new Integer[]{41,37,44,24,39,42,48,1,35,38,40
+                ,null,43,46,49,0,2,30,36,null,null,null,null,null,null
+                ,45,47,null,null,null,null,null,4,29,32,null,null,null
+                ,null,null,null,3,9,26,null,31,34,null,null,7,11,25,27
+                ,null,null,33,null,6,8,10,16,null,null,null,28,null,null
+                ,5,null,null,null,null,null,15,19,null,null,null,null,12,null,18,20,null,13,17,null,null,22,null,14,null,null,21,23}), 5.142, 45);
+        Util.print(l);
+    }
+
+    @Test
+    public void testnumberToWords() {
+        numberToWords f = new numberToWords();
+        String s = f.numberToWords(101);
+        Util.print(s);
     }
 
     @Test

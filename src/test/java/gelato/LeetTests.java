@@ -11,7 +11,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.awt.*;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -197,7 +196,7 @@ public class LeetTests {
     @Test
     public void testmaxPath() {
         maxPathSum m = new maxPathSum();
-        int v = m.maxPathSum(Util.getTestTree(new Integer[]{5,4,8,11,null,13,4,7,2,null,null,null,null,null,1}));
+        int v = m.maxPathSum(Util.getTestTreeByArray(new Integer[]{5,4,8,11,null,13,4,7,2,null,null,null,null,null,1}));
         print(v);
     }
 
@@ -234,7 +233,7 @@ public class LeetTests {
     @Test
     public void testPostOrder() {
         postorderTraversal m = new postorderTraversal();
-        List<Integer> v = m.postorderTraversal(Util.getTestTree(new Integer[]{1}));
+        List<Integer> v = m.postorderTraversal(Util.getTestTreeByArray(new Integer[]{1}));
         print(v);
     }
 

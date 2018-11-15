@@ -5,9 +5,7 @@ import gelato.model.TreeNode;
 
 import java.awt.*;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.*;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -63,6 +61,11 @@ public class Util {
         }
     }
 
+    public static void println(Object v){
+        print(v);
+        print("\n");
+    }
+
     public static int [] getOneDArray(String s){
         String [] items = s.replace("[","").replace("]", "").split(",");
         int [] array = new int[items.length];
@@ -80,8 +83,32 @@ public class Util {
         }
         return array;
     }
-
     public static TreeNode getTestTree(Integer [] data){
+        TreeNode root = null;
+        if(data != null && data.length > 0 && data[0] != null) {
+            root = new TreeNode(data[0]);
+            Deque<TreeNode> que = new ArrayDeque<>();
+            que.push(root);
+            int k = 1;
+            while (k < data.length){
+                TreeNode l = data[k] == null ? null : new TreeNode(data[k]);
+                if(l != null){
+                    que.offerLast(l);
+                }
+                TreeNode r = data[k + 1] == null ? null : new TreeNode(data[k + 1]);
+                if(r != null){
+                    que.offerLast(r);
+                }
+                TreeNode par = que.pollFirst();
+                par.left = l;
+                par.right = r;
+                k += 2;
+            }
+        }
+        return root;
+    }
+
+    public static TreeNode getTestTreeByArray(Integer [] data){
         TreeNode root = null;
         TreeNode [] nodes;
         if(data != null && data.length > 0 && data[0] != null) {
@@ -90,13 +117,15 @@ public class Util {
             nodes[0] = root;
             for(int i = 0; i < data.length; i ++){
                 TreeNode curNode = nodes[i];
-                if(i * 2 + 1 < data.length && data[i * 2 + 1] != null){
-                    curNode.left = new TreeNode(data[i * 2 + 1]);
-                    nodes[i * 2 + 1] = curNode.left;
-                }
-                if(i * 2 + 2 < data.length && data[i * 2 + 2] != null){
-                    curNode.right = new TreeNode(data[i * 2 + 2]);
-                    nodes[i * 2 + 2] = curNode.right;
+                if(curNode != null) {
+                    if (i * 2 + 1 < data.length && data[i * 2 + 1] != null) {
+                        curNode.left = new TreeNode(data[i * 2 + 1]);
+                        nodes[i * 2 + 1] = curNode.left;
+                    }
+                    if (i * 2 + 2 < data.length && data[i * 2 + 2] != null) {
+                        curNode.right = new TreeNode(data[i * 2 + 2]);
+                        nodes[i * 2 + 2] = curNode.right;
+                    }
                 }
             }
         }
