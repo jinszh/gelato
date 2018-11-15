@@ -32,7 +32,7 @@ public class LeetTests {
     public void end()
     {
         end = new Date();
-        print("execution time: " + (end.getTime() - start.getTime()));
+        print("\nexecution time: " + (end.getTime() - start.getTime()));
         Util.timerLock.unlock();
     }
 
