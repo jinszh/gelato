@@ -96,8 +96,87 @@ public class lee2 extends LeetTests {
     @Test
     public void testExpressionAddOperators() {
         ExpressionAddOperators f = new ExpressionAddOperators();
-        List<String> m = f.addOperators("123", 6);
-        Util.print(m);
+        List<String> m2 = f.addOperators("123456789", 45);
+        Util.print(m2);
+    }
+
+    @Test
+    public void testWordPatternII() {
+        WordPatternII f = new WordPatternII();
+        boolean b = f.wordPatternMatch("aaaa", "asdasdasdasd");
+        Util.print(b);
+    }
+
+    @Test
+    public void testBestMeetingPoint() {
+        BestMeetingPoint f = new BestMeetingPoint();
+        int b = f.minTotalDistance(Util.getTwoDMatrix("[[1,0,0,0,1],[0,0,0,0,0],[0,0,1,0,0]]"));
+        Util.print(b);
+    }
+
+    @Test
+    public void testNumberOfIslands() {
+        NumberOfIslands f = new NumberOfIslands();
+        List<Integer> l = f.numIslands2(3,3, Util.getTwoDMatrix("[[0,1],[1,2],[2,1],[1,0],[0,2],[0,0],[1,1]]"));
+        Util.print(l);
+    }
+
+    @Test
+    public void testRemoveDupLetters() {
+        RemoveDupLetters f = new RemoveDupLetters();
+        String s = f.removeDuplicateLetters("bcab");
+        Util.print(s);
+    }
+
+    @Test
+    public void testMinDistanceWithObstacles() {
+        shortestDistanceWithObstacles f = new shortestDistanceWithObstacles();
+        int s = f.shortestDistance(Util.getTwoDMatrix("[[1,0,2,0,1],[0,0,0,0,0],[0,0,1,0,0]]"));
+        Util.print(s);
+    }
+
+    @Test
+    public void testMaxNumFrom2Array() {
+        MaxNumFrom2Array f = new MaxNumFrom2Array();
+        int [] s = f.maxNumber(Util.getOneDArray("[8,3,9]"), Util.getOneDArray("[8,3,6,9]"), 4);
+        Util.print(s);
+    }
+
+    @Test
+    public void testCountRangeSum() {
+        countRangeSum f = new countRangeSum();
+        int s = f.countRangeSum2(new int[]{-2, 5, -1}, 4, 4);
+        Util.print(s);
+    }
+
+    @Test
+    public void testLongestIncreasingPath() {
+        LongestIncreasingPath f = new LongestIncreasingPath();
+        int s = f.longestIncreasingPath(Util.getTwoDMatrix("[\n" +
+                "  []] "));
+        Util.print(s);
+    }
+
+    @Test
+    public void testPatchingArray() {
+        PatchingArray f = new PatchingArray();
+        int s = f.minPatches(new int[]{1, 2}, 5);
+        Util.print(s);
+    }
+
+    @Test
+    public void testLongestSubStringWithKChar() {
+        LongestSubStringWithKChar f = new LongestSubStringWithKChar();
+        int s = f.lengthOfLongestSubstringKDistinct("abececed", 2);
+        Util.print(s);
+    }
+
+
+    @Test
+    public void testSelfCrossing() {
+        SelfCrossing f = new SelfCrossing();
+        boolean s = f.isSelfCrossing(new int[]{1,1,1,1});
+        Util.print(s);
     }
 
     @Test

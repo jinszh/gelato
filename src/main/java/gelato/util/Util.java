@@ -67,12 +67,28 @@ public class Util {
     }
 
     public static int [] getOneDArray(String s){
-        String [] items = s.replace("[","").replace("]", "").split(",");
+        String [] items = s.trim().replace("[","").replace("]", "").split("\\s*,\\s*");
         int [] array = new int[items.length];
         for(int i = 0; i< items.length; i++){
-            array[i] = Integer.parseInt(items[i]);
+            array[i] = Integer.parseInt(items[i].trim());
         }
         return array;
+    }
+
+    public static List<String> findDiffInList(String a1, String a2){
+        List<String> diff = new ArrayList<>();
+        String [] s1 = get1dStr(a1);
+        String [] s2 = get1dStr(a2);
+        HashSet<String> set1 = new HashSet<>();
+        HashSet<String> set2 = new HashSet<>();
+        set1.addAll(Arrays.asList(s1));
+        set2.addAll(Arrays.asList(s2));
+        for(String s : s1){
+            if(!set2.contains(s)){
+                diff.add(s);
+            }
+        }
+        return diff;
     }
 
     public static String [] get1dStr(String s) {
