@@ -234,6 +234,20 @@ public class lee2 extends LeetTests {
     }
 
     @Test
+    public void testSplitArrayLargestSum() {
+        SplitArrayLargestSum f = new SplitArrayLargestSum();
+        int s = f.splitArray(Util.getOneDArray("[7,2,5,10,8]"), 3);
+        Util.print(s);
+    }
+
+    @Test
+    public void testMinimalUniqueWorkAbbreviation() {
+        MinimalUniqueWorkAbbreviation f = new MinimalUniqueWorkAbbreviation();
+        String s = f.minAbbreviation("Apple", Util.get1dStr("[Blade]"));
+        Util.print(s);
+    }
+
+    @Test
     public void testSummaryRanges() {
         SummaryRanges f = new SummaryRanges();
         f.addNum(1);
