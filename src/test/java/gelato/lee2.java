@@ -167,16 +167,82 @@ public class lee2 extends LeetTests {
     @Test
     public void testLongestSubStringWithKChar() {
         LongestSubStringWithKChar f = new LongestSubStringWithKChar();
-        int s = f.lengthOfLongestSubstringKDistinct("abececed", 2);
+        int s = f.lengthOfLongestSubstringKDistinct("aaabc", 3);
         Util.print(s);
     }
 
+    @Test
+    public void testSearch2DMatrixII() {
+        Search2DMatrixII f = new Search2DMatrixII();
+        boolean s = f.searchMatrix(Util.getTwoDMatrix("[\n" +
+                "  [1]\n" +
+                "]"), 1);
+        Util.print(s);
+    }
 
     @Test
     public void testSelfCrossing() {
         SelfCrossing f = new SelfCrossing();
         boolean s = f.isSelfCrossing(new int[]{1,1,1,1});
         Util.print(s);
+    }
+
+    @Test
+    public void testRussianDoll() {
+        RussianDoll f = new RussianDoll();
+        int s = f.maxEnvelopes(Util.getTwoDMatrix("[[4,5],[4,6],[6,7],[2,3],[1,1]]"));
+        Util.print(s);
+    }
+
+    @Test
+    public void testRearrangeStringKDis() {
+        RearrangeStringKDis f = new RearrangeStringKDis();
+        String s = f.rearrangeString2(Util.readFromFile("rearr.txt"),26);
+        Util.print(s);
+    }
+
+    @Test
+    public void testMaxSumOfRectangle() {
+        MaxSumOfRectangle f = new MaxSumOfRectangle();
+        int s = f.maxSumSubmatrix(Util.getTwoDMatrix("[[2,2,-1,3]]"),3);
+        Util.print(s);
+    }
+
+    @Test
+    public void testPerfectRectangle() {
+        PerfectRectangle f = new PerfectRectangle();
+        boolean s = f.isRectangleCover(Util.getTwoDMatrix("[[0,0,4,1],[7,0,8,2],[6,2,8,3],[5,1,6,3],[4,0,5,1],[6,0,7,2],[4,2,5,3],[2,1,4,3],[0,1,2,2],[0,2,2,3],[4,1,5,2],[5,0,6,1]]"));
+        Util.print(s);
+    }
+
+    @Test
+    public void testFrogJump() {
+        FrogJump f = new FrogJump();
+        boolean s = f.canCross(Util.getOneDArray("[0,1,2,3,4,8,9,11]"));
+        Util.print(s);
+    }
+
+    @Test
+    public void testTrappingRainWater3D() {
+        TrappingRainWater3D f = new TrappingRainWater3D();
+        int s = f.trapRainWater(Util.getTwoDMatrix("[\n" +
+                "  [1,4,3,1,3,2],\n" +
+                "  [3,2,1,3,2,4],\n" +
+                "  [2,3,3,2,3,1]\n" +
+                "]"));
+        Util.print(s);
+    }
+
+    @Test
+    public void testSummaryRanges() {
+        SummaryRanges f = new SummaryRanges();
+        f.addNum(1);
+        f.addNum(3);
+        f.addNum(7);
+        Util.print(f.getIntervals());
+        f.addNum(2);
+        f.addNum(6);
+        Util.print(f.getIntervals());
     }
 
     @Test

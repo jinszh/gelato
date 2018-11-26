@@ -3,7 +3,9 @@ package gelato.util;
 import gelato.model.ListNode;
 import gelato.model.TreeNode;
 
+
 import java.awt.*;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
@@ -73,6 +75,16 @@ public class Util {
             array[i] = Integer.parseInt(items[i].trim());
         }
         return array;
+    }
+
+    public static String readFromFile(String filePath) {
+        try {
+            InputStream stream = (InputStream)Util.class.getClassLoader().getResource(filePath).getContent();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+            return reader.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static List<String> findDiffInList(String a1, String a2){
