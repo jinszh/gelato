@@ -243,7 +243,7 @@ public class lee2 extends LeetTests {
     @Test
     public void testMinimalUniqueWorkAbbreviation() {
         MinimalUniqueWorkAbbreviation f = new MinimalUniqueWorkAbbreviation();
-        String s = f.minAbbreviation("Apple", Util.get1dStr("[Blade]"));
+        String s = f.minAbbreviation("leetcode", Util.get1dStr("[\"lyftcode\",\"leetcold\",\"litecode\",\"lietcode\",\"leetccod\",\"lyftcold\"]"));
         Util.print(s);
     }
 
