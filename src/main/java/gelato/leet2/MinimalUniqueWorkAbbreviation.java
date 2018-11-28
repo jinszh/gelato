@@ -5,36 +5,28 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MinimalUniqueWorkAbbreviation {
-    int minL = Integer.MAX_VALUE;
+    //Original version
     public String minAbbreviation(String target, String [] dict) {
         List<Integer>[] con = new List[target.length()];
-        boolean[] ex = new boolean[dict.length];
         int numDict = dict.length;
         for (int k = 0; k < dict.length; k++) {
             if (dict[k].length() != target.length()) {
                 numDict--;
+                continue;
             }
-        }
-        if(numDict == 0){
-            return Integer.toString(target.length());
-        }
-        for (int i = 0; i < target.length(); i++) {
-            con[i] = new ArrayList<>();
-            for (int k = 0; k < dict.length; k++) {
-                if (dict[k].length() != target.length()) {
-                    continue;
-                }
+            for (int i = 0; i < target.length(); i++) {
                 if (target.charAt(i) != dict[k].charAt(i)) {
+                    if (con[i] == null) con[i] = new ArrayList<>();
                     con[i].add(k);
                 }
             }
         }
-        return findMin(target, 0, con, "", ex, numDict, 0, 0);
+        return numDict == 0 ? Integer.toString(target.length()) : findMin(target, 0, con, "", new boolean[dict.length], numDict, 0, 0);
     }
 
     private String findMin(String target, int i, List<Integer> [] noConL
             ,String partial, boolean [] noCon, int totalCon, int nBefore, int parLen) {
-        int effective = noConL[i].size() == 0 ? 0 : (int)noConL[i].stream().filter(o -> noCon[o] == false).count();
+        int effective = noConL[i] == null ? 0 : (int)noConL[i].stream().filter(o -> noCon[o] == false).count();
         if (effective == totalCon) {
             String s2 = null;
             if (nBefore > 0 && i < target.length() - 1) {
@@ -76,4 +68,86 @@ public class MinimalUniqueWorkAbbreviation {
             }
         }
     }
+
+    //version 2, using bit mask
+    public String minAbbreviation2(String target, String [] dict) {
+        List<Integer> masks = new ArrayList<>();
+        int numDict = dict.length, full = 0;
+        targetLen = target.length();
+        for (int k = 0; k < dict.length; k++) {
+            if (dict[k].length() != target.length()) {
+                numDict--;
+                continue;
+            }
+            int mask = 0;
+            for (int i = target.length() - 1, bit = 1; i >= 0; i--, bit <<= 1) {
+                if (target.charAt(i) != dict[k].charAt(i)) {
+                    mask += bit;
+                }
+            }
+            full |= mask;
+            masks.add(mask);
+        }
+        if (numDict == 0) {
+            return Integer.toString(target.length());
+        }
+        minV = full; minL = getLen(full);
+        solve(full, target.length() - 1, masks);
+        StringBuilder res = new StringBuilder();
+        int nMasked = 0;
+        for (int i = 0; i < target.length(); i++) {
+            if ((minV & (1 << (target.length() - 1 - i))) > 0) {
+                if (nMasked > 0) {
+                    res.append(nMasked);
+                    nMasked = 0;
+                }
+                res.append(target.charAt(i));
+            } else {
+                nMasked++;
+            }
+        }
+        if(nMasked > 0){
+            res.append(nMasked);
+        }
+        return res.toString();
+    }
+
+    private void solve(int val, int id, List<Integer> dict) {
+        for (int i = id; i >= 0; i--) {
+            if ((val & (1 << i)) > 0) {
+                int vHid = val ^ (1 << i);
+                if (dict.stream().allMatch(o -> (o & vHid) > 0)) {
+                    int l = getLen(vHid);
+                    if (l < minL) {
+                        minL = l;
+                        minV = vHid;
+                    }
+                    if (i > 0) {
+                        solve(vHid, i - 1, dict);
+                    }
+                }
+            }
+        }
+    }
+
+    private int getLen(int v) {
+        if (v < 0) {
+            return Integer.MAX_VALUE;
+        }
+        int end = 1;
+        int len = 0;
+        int step = 0;
+        while (step < targetLen) {
+            if ((v & 1) == 1 || (v & 1) != end) {
+                len++;
+                end = (v & 1);
+            }
+            v >>= 1;
+            step++;
+        }
+        return len;
+    }
+    int minL = Integer.MAX_VALUE;
+    int minV = -1;
+    int targetLen = 0;
 }

@@ -243,8 +243,22 @@ public class lee2 extends LeetTests {
     @Test
     public void testMinimalUniqueWorkAbbreviation() {
         MinimalUniqueWorkAbbreviation f = new MinimalUniqueWorkAbbreviation();
-        String s = f.minAbbreviation("leetcode", Util.get1dStr("[\"lyftcode\",\"leetcold\",\"litecode\",\"lietcode\",\"leetccod\",\"lyftcold\"]"));
+        String s = f.minAbbreviation2("apple", Util.get1dStr("[\"blade\",\"plain\",\"amber\"]"));
         Util.print(s);
+    }
+
+    @Test
+    public void testStrongPasswordChecker() {
+        StrongPasswordChecker f = new StrongPasswordChecker();
+        int s = f.strongPasswordChecker("aaaabbaaabbaaa123456A");
+        Util.print(s);
+    }
+
+    @Test
+    public void testWordSquares() {
+        WordSquares f = new WordSquares();
+        List<List<String>> res = f.wordSquares(Util.get1dStr("[\"abat\",\"baba\",\"atan\",\"atal\"]"));
+        Util.print(res);
     }
 
     @Test
