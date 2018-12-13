@@ -77,11 +77,11 @@ public class Util {
         return array;
     }
 
-    public static String readFromFile(String filePath) {
+    public static String [] readFromFile(String filePath) {
         try {
             InputStream stream = (InputStream)Util.class.getClassLoader().getResource(filePath).getContent();
             BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-            return reader.readLine();
+            return reader.lines().toArray(String[]::new);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -104,10 +104,10 @@ public class Util {
     }
 
     public static String [] get1dStr(String s) {
-        String[] items = s.replace("[", "").replace("]", "").split(",");
+        String[] items = s.split(",");
         String[] array = new String[items.length];
         for (int i = 0; i < items.length; i++) {
-            array[i] = items[i].replace("\"","").replace("'","").trim();
+            array[i] = items[i].replace("[", "").replace("]", "").replace("\"","").replace("'","").trim();
         }
         return array;
     }
@@ -160,11 +160,16 @@ public class Util {
         return root;
     }
 
-    //求最大公约数
-    public static int generateGCD(int a,int b){
+    //求最大公约数 - Greatest common divisor
+    public static long gcd(long a, long b){
         if (b==0) return a;
-        else return generateGCD(b,a%b);
+        else return gcd(b,a%b);
+    }
 
+    //求最小公倍数 - Least common multiple
+    public static long lcm(long a, long b)
+    {
+        return a * (b / gcd(a, b));
     }
 
     public static int[][] getTwoDMatrix(String in) {

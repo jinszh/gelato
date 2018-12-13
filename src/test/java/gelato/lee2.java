@@ -2,6 +2,7 @@ package gelato;
 
 import gelato.leet2.*;
 import gelato.leet2.shortestPalindrome;
+import gelato.leet2.ConcatenatedWords;
 import gelato.util.Trie;
 import gelato.util.Util;
 import org.junit.Test;
@@ -32,6 +33,76 @@ public class lee2 extends LeetTests {
         Util.print(v);
     }
 
+    @Test
+    public void testKthLexicoOrder() {
+        KthLexicoOrder f = new KthLexicoOrder();
+        int v = f.findKthNumber(10, 3);
+        Util.print(v);
+    }
+
+    @Test
+    public void testArithmeticSlices() {
+        ArithmeticSlices f = new ArithmeticSlices();
+        int v = f.numberOfArithmeticSlices(Util.getOneDArray("[1,3,3,5,7,9]"));
+        Util.print(v);
+    }
+
+    @Test
+    public void testCountTheRepetitions() {
+        CountTheRepetitions f = new CountTheRepetitions();
+        int v = f.getMaxRepetitions("aaa", 10, "aaaaa", 2);
+        Util.print(v);
+    }
+
+    @Test
+    public void testEncodeWithShortestLen() {
+        EncodeWithShortestLen f = new EncodeWithShortestLen();
+        String v = f.encode("aaaaaa");
+        Util.print(v);
+    }
+
+    @Test
+    public void testConcatenatedWords() {
+        ConcatenatedWords f = new ConcatenatedWords();
+        List<String> v = f.findAllConcatenatedWordsInADict(Util.get1dStr("[\"cat\",\"cats\",\"catsdogcats\",\"dog\",\"dogcatsdog\",\"hippopotamuses\",\"rat\",\"ratcatdogcat\"]"));
+        Util.print(v);
+    }
+
+    @Test
+    public void testSmallestGoodBase() {
+        SmallestGoodBase f = new SmallestGoodBase();
+        String v = f.smallestGoodBase("13");
+        Util.print(v);
+    }
+
+    @Test
+    public void testSlidingWindowMedian() {
+        SlidingWindowMedian f = new SlidingWindowMedian();
+        double [] v = f.medianSlidingWindow(new int[]{1,1,1,1}, 2);
+        //double [] v = f.medianSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7}, 3);
+        Util.print(v);
+    }
+
+    @Test
+    public void testAllOne() {
+        AllOne c = new AllOne();
+        String [] data = Util.readFromFile("AllOne.txt");
+        String [] op = Util.get1dStr(data[0]);
+        String [] dt = Util.get1dStr(data[1]);
+        int binc = 0 , bdec = 0;
+        for(int i = 0 ; i < op.length; i++){
+            if(op[i].equals("inc")){
+                if(dt[i].equals("b"))binc++;
+                c.inc(dt[i]);
+            }else if (op[i].equals("dec")) {
+                if(dt[i].equals("b"))bdec++;
+                c.dec(dt[i]);
+            }
+        }
+
+        Util.print(c.getMaxKey());
+        Util.print(c.getMinKey());
+    }
 
     @Test
     public void testCalculate() {
@@ -197,7 +268,7 @@ public class lee2 extends LeetTests {
     @Test
     public void testRearrangeStringKDis() {
         RearrangeStringKDis f = new RearrangeStringKDis();
-        String s = f.rearrangeString2(Util.readFromFile("rearr.txt"),26);
+        String s = f.rearrangeString2(Util.readFromFile("rearr.txt")[0],26);
         Util.print(s);
     }
 
@@ -258,6 +329,29 @@ public class lee2 extends LeetTests {
     public void testWordSquares() {
         WordSquares f = new WordSquares();
         List<List<String>> res = f.wordSquares(Util.get1dStr("[\"abat\",\"baba\",\"atan\",\"atal\"]"));
+        Util.print(res);
+    }
+
+    @Test
+    public void testMazeIII() {
+        MazeIII f = new MazeIII();
+        String res = f.findShortestWay(Util.getTwoDMatrix("[[0,0,0,0,0],[1,1,0,0,1],[0,0,0,0,0],[0,1,0,0,1],[0,1,0,0,0]]")
+                ,Util.getOneDArray("[4,3]")
+                ,Util.getOneDArray("[0,1]"));
+        Util.print(res);
+    }
+
+    @Test
+    public void testZumaGame() {
+        ZumaGame f = new ZumaGame();
+        int res = f.findMinStep("WRRBBW","RB");
+        Util.print(res);
+    }
+
+    @Test
+    public void testReversePairs() {
+        ReversePairs f = new ReversePairs();
+        int res = f.reversePairs(new int[]{2147483647,-2147483647,-2147483647,-2147483647});
         Util.print(res);
     }
 
