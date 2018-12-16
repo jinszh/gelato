@@ -77,6 +77,7 @@ public class Util {
         return array;
     }
 
+
     public static String [] readFromFile(String filePath) {
         try {
             InputStream stream = (InputStream)Util.class.getClassLoader().getResource(filePath).getContent();

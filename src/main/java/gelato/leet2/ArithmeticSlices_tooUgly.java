@@ -1,6 +1,8 @@
 package gelato.leet2;
 
 
+import gelato.util.DevUtil;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -42,7 +44,7 @@ public class ArithmeticSlices_tooUgly {
                                     dups.add(new int[]{hops, dupNum[nxtHop]});
                                 }
                                 if ((long) A[pos] + dist > Integer.MAX_VALUE) break;
-                                nxtHop = biSearchFirst(A, pos, len - 1, (int) (A[pos] + dist));
+                                nxtHop = DevUtil.biSearchFirst(A, pos, len - 1, (int) (A[pos] + dist));
                             } else {
                                 break;
                             }
@@ -87,22 +89,6 @@ public class ArithmeticSlices_tooUgly {
 
     private int getSum(int nnode) {
         return nnode > 2 ? (nnode - 2) * (nnode - 1) / 2 : 0;
-    }
-
-    public  int biSearchFirst(int [] array, int start, int end, int key) {
-        while (start <= end) {
-            int mid = (start + end) / 2;
-            if (array[mid] == key && (mid == 0 || array[mid] > array[mid - 1])) {
-                return mid;
-            } else {
-                if (array[mid] > key || (array[mid] == key && mid > 0 && array[mid] == array[mid - 1])) {
-                    end = mid - 1;
-                } else {
-                    start = mid + 1;
-                }
-            }
-        }
-        return -1;
     }
 
     private void markDup(int[] A, int[] dupNum, int i) {
