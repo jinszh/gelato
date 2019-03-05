@@ -17,6 +17,11 @@ public class App
 {
     public static void main( String[] args )
     {
+        synchronized(App.class){
+
+        }
+
+
     }
 
 

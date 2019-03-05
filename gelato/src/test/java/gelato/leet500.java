@@ -86,4 +86,11 @@ public class leet500 extends LeetTests {
         int v = f.findIntegers(8);
         Util.print(v);
     }
+
+    @Test
+    public void testkInversePairs(){
+        kInversePairs kip = new kInversePairs();
+        int v =kip.kInversePairs(5, 3);
+        Util.print(v);
+    }
 }
