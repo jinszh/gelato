@@ -1,11 +1,16 @@
+import conc.CollectionTests;
 import conc.ThreadTests;
 
 import java.util.Scanner;
 
 public class app {
     public static void main(String[] args){
-        ThreadTests f = new ThreadTests();
-        f.iter();
+//        ThreadTests f = new ThreadTests();
+//        f.iter();
+
+        CollectionTests t = new CollectionTests();
+        t.t1();
+
     }//end
 
     public static void v1(){
