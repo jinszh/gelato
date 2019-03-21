@@ -10,7 +10,5 @@ public class CollectionTests {
         hashSet.put(null, 1);
         hashSet.put(null, 2);
         System.out.println(hashSet.get(null));
-
-
     }
 }

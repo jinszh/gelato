@@ -4,8 +4,6 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static sun.swing.SwingUtilities2.adjustFocus;
-import static sun.swing.SwingUtilities2.submit;
 
 public class ThreadTests {
     public void hereSchedule() {

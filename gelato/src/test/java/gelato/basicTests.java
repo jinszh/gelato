@@ -16,8 +16,9 @@ public class basicTests extends LeetTests {
     @Test
     public void testQuickSort(){
         QSort f = new QSort();
-        int v = f.QSort(new int[]{4,2,6,1,7,3});
-        Util.print(v);
+        int [] arr = new int[]{1,2,2,0};
+        f.QSort(arr);
+        Util.print(arr);
     }
 
 }
