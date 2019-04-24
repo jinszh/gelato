@@ -91,4 +91,20 @@ public class lee10 extends LeetTests {
         int n = t.longestOnes(new int[]{0,0,0,0,0,1,1,0,1}, 3);
         print(n);
     }
+
+    @Test
+    public void test1003() {
+        isValid t = new isValid();
+        boolean n = t.isValid("aabcbc");
+        print(n);
+    }
+
+    @Test
+    public void test1001() {
+        gridIllumination t = new gridIllumination();
+        String [] inputs = Util.readFromFile("gridIllumination.txt");
+        int [] n = t.gridIllumination(Integer.parseInt(inputs[0]), Util.getTwoDMatrix(inputs[1])
+                , Util.getTwoDMatrix(inputs[2]));
+        print(n);
+    }
 }
