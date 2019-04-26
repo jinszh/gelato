@@ -107,4 +107,11 @@ public class lee10 extends LeetTests {
                 , Util.getTwoDMatrix(inputs[2]));
         print(n);
     }
+
+    @Test
+    public void test1000() {
+        mergeStones t = new mergeStones();
+        int n = t.mergeStones(new int[]{3,2,4,1}, 2);
+        print(n);
+    }
 }
