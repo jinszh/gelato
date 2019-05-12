@@ -123,9 +123,10 @@ public class lee9 extends LeetTests {
     @Test
     public void test974() {
         subarraysDivByK f = new subarraysDivByK();
-        //int n = f.subarraysDivByK(Util.getOneDArray("[4,5,0,-2,-3,1]"), 5);
+        int n = f.subarraysDivByK(Util.getOneDArray("[-1,2,9]"), 2);
+       // int n = f.subarraysDivByK(Util.getOneDArray("[4,5,0,-2,-3,1]"), 5);
         String [] inputs = Util.readFromFile("subarraysDivByK.txt");
-        int n = f.subarraysDivByK(Util.getOneDArray(inputs[0]), Integer.parseInt(inputs[1]));
+        //int n = f.subarraysDivByK(Util.getOneDArray(inputs[0]), Integer.parseInt(inputs[1]));
         Util.print(n);
     }
 }
