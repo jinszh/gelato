@@ -13,6 +13,13 @@ import static org.junit.Assert.assertTrue;
 
 public class lee2 extends LeetTests {
     @Test
+    public void test238(){
+        productExceptSelf f = new productExceptSelf();
+        int [] v = f.productExceptSelf_fast(Util.getOneDArray("[1,2,3,4]"));
+        Util.print(v);
+    }
+
+    @Test
     public void testTrie(){
         Trie trie = new Trie();
         boolean v = trie.startsWith("a");
