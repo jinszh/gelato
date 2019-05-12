@@ -12,4 +12,12 @@ public class lee8 extends LeetTests{
                 "[142126477]"), 142126479);
         print(n);
     }
+
+    @Test
+    public void test877() {
+        minEatingSpeed t = new minEatingSpeed();
+        int n = t.minEatingSpeed_my(Util.getOneDArray("\n" +
+                "[142126477]"), 142126479);
+        print(n);
+    }
 }

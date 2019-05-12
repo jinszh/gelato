@@ -1,16 +1,13 @@
 package gelato;
 
-import gelato.lee500.*;
-import gelato.util.Trie;
+import gelato.leet5.*;
 import gelato.util.Util;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-public class leet500 extends LeetTests {
+public class lee5 extends LeetTests {
     @Test
     public void testIPO(){
         IPO f = new IPO();
@@ -91,6 +88,13 @@ public class leet500 extends LeetTests {
     public void testkInversePairs(){
         kInversePairs kip = new kInversePairs();
         int v =kip.kInversePairs(5, 3);
+        Util.print(v);
+    }
+
+    @Test
+    public void test560(){
+        subarraySum f = new subarraySum();
+        int v =f.subarraySum(Util.getOneDArray("[1]"), 0);
         Util.print(v);
     }
 }

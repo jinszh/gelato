@@ -1,4 +1,4 @@
-package gelato.lee500;
+package gelato.leet5;
 
 public class StudentAttendanceRecordII {
     public int checkRecord(int n) {

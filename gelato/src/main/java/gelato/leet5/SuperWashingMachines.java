@@ -1,6 +1,4 @@
-package gelato.lee500;
-
-import java.util.Arrays;
+package gelato.leet5;
 
 public class SuperWashingMachines {
     //Only need to find the peak throughput

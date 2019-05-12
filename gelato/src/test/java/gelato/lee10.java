@@ -111,7 +111,7 @@ public class lee10 extends LeetTests {
     @Test
     public void test1000() {
         mergeStones t = new mergeStones();
-        int n = t.mergeStones(new int[]{3,2,4,1}, 2);
+        int n = t.mergeStones_optmized(new int[]{3,2,4,1}, 2);
         print(n);
     }
 }

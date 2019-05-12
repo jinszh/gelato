@@ -1,4 +1,4 @@
-package gelato.lee500;
+package gelato.leet5;
 
 public class RemoveBoxes {
     //如果不是自包含的可以划分成子问题的, 就改变定义, 使其变得自包含!!

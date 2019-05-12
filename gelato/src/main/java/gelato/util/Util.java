@@ -7,6 +7,7 @@ import gelato.model.TreeNode;
 import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Array;
+import java.text.ParseException;
 import java.util.*;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
@@ -52,13 +53,19 @@ public class Util {
         if(v instanceof java.util.List){
             for(Object o : (List)v){
                 print(o);
-                print("\n");
+                print(",");
             }
+            print("\n");
         }else if(v instanceof int[]){
             for(Object o : (int[])v){
                 print(o + " ");
             }
-        } else{
+        }else if(v instanceof int[][]){
+            for(Object o : (int[][])v){
+                print(o);
+                print(" ; ");
+            }
+        }else{
             System.out.print(v);
         }
     }
@@ -73,6 +80,19 @@ public class Util {
         int [] array = new int[items.length];
         for(int i = 0; i< items.length; i++){
             array[i] = Integer.parseInt(items[i].trim());
+        }
+        return array;
+    }
+
+    public static Integer [] getOneDIntegerArray(String s){
+        String [] items = s.trim().replace("[","").replace("]", "").split("\\s*,\\s*");
+        Integer [] array = new Integer[items.length];
+        for(int i = 0; i< items.length; i++){
+            try {
+                array[i] = Integer.parseInt(items[i].trim());
+            }catch (NumberFormatException e){
+                array[i] = null;
+            }
         }
         return array;
     }
@@ -137,25 +157,21 @@ public class Util {
         return root;
     }
 
-    public static TreeNode getTestTreeByArray(Integer [] data){
+    public static TreeNode getTestTreeByArray(Integer [] data) {
         TreeNode root = null;
-        TreeNode [] nodes;
-        if(data != null && data.length > 0 && data[0] != null) {
+        TreeNode[] nodes;
+
+        if (data != null && data.length > 0 && data[0] != null) {
             root = new TreeNode(data[0]);
             nodes = new TreeNode[data.length];
             nodes[0] = root;
-            for(int i = 0; i < data.length; i ++){
-                TreeNode curNode = nodes[i];
-                if(curNode != null) {
-                    if (i * 2 + 1 < data.length && data[i * 2 + 1] != null) {
-                        curNode.left = new TreeNode(data[i * 2 + 1]);
-                        nodes[i * 2 + 1] = curNode.left;
-                    }
-                    if (i * 2 + 2 < data.length && data[i * 2 + 2] != null) {
-                        curNode.right = new TreeNode(data[i * 2 + 2]);
-                        nodes[i * 2 + 2] = curNode.right;
-                    }
+            int lastNotNul = 0;
+            for (int i = 1; i < data.length && lastNotNul < data.length; i += 2) {
+                nodes[lastNotNul].left = nodes[i] = data[i] == null ? null : new TreeNode(data[i]);
+                if (nodes.length > i + 1) {
+                    nodes[lastNotNul++].right = nodes[i + 1] = data[i + 1] == null ? null : new TreeNode(data[i + 1]);
                 }
+                while (lastNotNul < data.length && nodes[lastNotNul] == null) lastNotNul++;
             }
         }
         return root;

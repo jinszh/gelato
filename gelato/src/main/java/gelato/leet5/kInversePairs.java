@@ -1,6 +1,4 @@
-package gelato.lee500;
-
-import java.util.Arrays;
+package gelato.leet5;
 
 public class kInversePairs {
     public int kInversePairs(int n, int k) {

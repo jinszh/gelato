@@ -1,4 +1,4 @@
-package gelato.lee500;
+package gelato.leet5;
 
 public class NonNegativeIntNoConsecutiveOnes {
     public static int findIntegers(int num) {
