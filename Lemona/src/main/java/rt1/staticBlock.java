@@ -1,6 +1,4 @@
-package yellow;
-
-import java.util.Scanner;
+package rt1;
 
 public class staticBlock {
 //    static boolean flag = true;

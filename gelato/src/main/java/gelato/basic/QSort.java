@@ -27,7 +27,6 @@ public class QSort {
     }
 
     private int partitionM(int [] array, int low, int high){
-        int pivotId = low;
         int pivot = array[low];
         while (low < high){
             //注意 high -- 要放在前面!!! 才能保证low收敛在<=pivot的数字上
