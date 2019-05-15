@@ -1,4 +1,4 @@
-package yellow;
+package rt1;
 
 import java.util.Scanner;
 

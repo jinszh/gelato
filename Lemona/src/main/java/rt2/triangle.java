@@ -1,6 +1,5 @@
-package green;
+package rt2;
 
-import java.io.*;
 import java.util.*;
 
 public class triangle{
