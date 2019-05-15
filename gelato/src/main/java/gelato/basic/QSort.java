@@ -13,21 +13,7 @@ public class QSort {
         }
     }
 
-    private int partitionH(int [] array, int low, int high){
-        int pivot = array[high];
-        int i = low;
-        for(int j = low ; j < high; j++){
-            if(array[j] <= pivot){ //用的是<= 同理下面用的是>=和<=
-                swap(array, i, j);
-                i++;
-            }
-        }
-        swap(array, i, high);
-        return i;
-    }
-
     private int partitionM(int [] array, int low, int high){
-        int pivotId = low;
         int pivot = array[low];
         while (low < high){
             //注意 high -- 要放在前面!!! 才能保证low收敛在<=pivot的数字上
@@ -43,12 +29,20 @@ public class QSort {
         return low;
     }
 
-    private void swap(int [] array, int i, int j) {
-        int tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
+    //Another way
+    private int partition(int [] nums, int low, int high) {
+        int pivot = nums[high];
+        int i = low;
+        for (int j = low; j < high; j++) {
+            if (nums[j] <= pivot) { //用的是<= 同理下面用的是>=和<=, 因为i, j起点相同, 如果第一个数比pivot小, j必须也要自加
+                int swap = nums[i];
+                nums[i] = nums[j];
+                nums[j] = swap;
+                i++;
+            }
+        }
+        nums[high] = nums[i];
+        nums[i] = pivot;
+        return i;
     }
-
-
-
 }

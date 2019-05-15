@@ -12,6 +12,14 @@ import java.util.List;
 import static org.junit.Assert.assertTrue;
 
 public class lee2 extends LeetTests {
+
+    @Test
+    public void test215() {
+        findKthLargest f = new findKthLargest();
+        int v = f.findKthLargest_par(Util.getOneDArray("[3,2,3,1,2,4,5,5,6,7,7,8,2,3,1,1,1,10,11,5,6,2,4,7,8,5,6]"), 20);
+        Util.print(v);
+    }
+
     @Test
     public void test238(){
         productExceptSelf f = new productExceptSelf();

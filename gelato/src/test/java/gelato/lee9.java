@@ -129,4 +129,18 @@ public class lee9 extends LeetTests {
         //int n = f.subarraysDivByK(Util.getOneDArray(inputs[0]), Integer.parseInt(inputs[1]));
         Util.print(n);
     }
+
+    @Test
+    public void test973() {
+        kClosest f = new kClosest();
+        int [][] n = f.kClosest(Util.getTwoDMatrix("[[1,3],[-2,2]]"), 1);
+        Util.print(n);
+    }
+
+    @Test
+    public void test972() {
+        isRationalEqual f = new isRationalEqual();
+        boolean n = f.isRationalEqual_w1("0.05(25)", "0.0(52)");
+        Util.print(n);
+    }
 }
