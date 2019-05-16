@@ -97,4 +97,20 @@ public class lee5 extends LeetTests {
         int v =f.subarraySum(Util.getOneDArray("[1]"), 0);
         Util.print(v);
     }
+
+    @Test
+    public void test535(){
+        Codec f = new Codec();
+        String c =f.encode("https://leetcode.com/problems/design-tinyurl");
+        c =f.decode("-85/0");
+        Util.print(c);
+    }
+
+    @Test
+    public void test523(){
+        checkSubarraySum f = new checkSubarraySum();
+        String [] inputs = Util.readFromFile("523");
+        boolean c =f.checkSubarraySum(Util.getOneDArray(inputs[0]) , Integer.parseInt(inputs[1]));
+        Util.print(c);
+    }
 }
