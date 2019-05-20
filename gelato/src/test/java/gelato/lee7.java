@@ -13,6 +13,20 @@ public class lee7 extends LeetTests{
     }
 
     @Test
+    public void test718() {
+        findLength t = new findLength();
+        int n = t.findLength_im(Util.getOneDArray("[1,2,3,2,1]"), Util.getOneDArray("[3,2,1,4,7]"));
+        print(n);
+    }
+
+    @Test
+    public void test739() {
+        dailyTemperatures t = new dailyTemperatures();
+        int [] n = t.dailyTemperatures(Util.getOneDArray("[73,74,75,71,69,72,76,73]"));
+        print(n);
+    }
+
+    @Test
     public void test774() {
         minmaxGasDist t = new minmaxGasDist();
         double n = t.minmaxGasDist(Util.getOneDArray("[1,2,3,4,5,6,7,8,9,10]"), 9);

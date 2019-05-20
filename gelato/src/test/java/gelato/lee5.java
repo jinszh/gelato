@@ -107,6 +107,13 @@ public class lee5 extends LeetTests {
     }
 
     @Test
+    public void test525(){
+        findMaxLength f = new findMaxLength();
+        int c =f.findMaxLength(Util.getOneDArray("[0,0,1,0,0,1,1]"));
+        Util.print(c);
+    }
+
+    @Test
     public void test523(){
         checkSubarraySum f = new checkSubarraySum();
         String [] inputs = Util.readFromFile("523");

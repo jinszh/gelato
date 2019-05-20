@@ -16,6 +16,13 @@ public class lee6 extends LeetTests {
     }
 
     @Test
+    public void test658() {
+        findClosestElements t = new findClosestElements();
+        List n = t.findClosestElements_OLgN(new int[]{1,2,7,8,9}, 2, 6);
+        Util.print(n);
+    }
+
+    @Test
     public void test692() {
         topKFrequent t = new topKFrequent();
         List n = t.topKFrequent(Util.get1dStr("[\"i\", \"love\", \"leetcode\", \"i\", \"love\", \"coding\"]"), 2);

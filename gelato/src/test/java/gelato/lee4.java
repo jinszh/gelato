@@ -15,7 +15,7 @@ public class lee4  extends LeetTests{
     @Test
     public void test464() {
         canIWin f = new canIWin();
-        boolean v = f.canIWin(20, 300);
+        boolean v = f.canIWin(10, 0);
         Util.print(v);
     }
 }

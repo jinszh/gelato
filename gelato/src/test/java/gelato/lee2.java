@@ -21,12 +21,24 @@ public class lee2 extends LeetTests {
     }
 
     @Test
+    public void test294() {
+        canWin f = new canWin();
+        boolean v = f.canWin("+++-----+++++---+++++++++++++++");
+        Util.print(v);
+    }
+    @Test
     public void test238(){
         productExceptSelf f = new productExceptSelf();
         int [] v = f.productExceptSelf_fast(Util.getOneDArray("[1,2,3,4]"));
         Util.print(v);
     }
 
+    @Test
+    public void test209(){
+        minSubArrayLen f = new minSubArrayLen();
+        int v = f.minSubArrayLen(4, Util.getOneDArray("[1,4,4]"));
+        Util.print(v);
+    }
     @Test
     public void testTrie(){
         Trie trie = new Trie();
