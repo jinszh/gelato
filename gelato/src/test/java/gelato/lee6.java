@@ -7,12 +7,17 @@ import gelato.leet6.*;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class lee6 extends LeetTests {
     @Test
     public void test638() {
         shoppingOffers t = new shoppingOffers();
-        int n = t.shoppingOffers(Arrays.asList(2,5),Util.getTwoDList("[[3,0,5],[1,2,10]]"), Arrays.asList(3,2));
+        String [] inputs = Util.readFromFile("638.txt");
+        //int n = t.shoppingOffers(Arrays.asList(2,5),Util.getTwoDList("[[3,0,5],[1,2,10]]"), Arrays.asList(3,2));
+        int n = t.shoppingOffers(Arrays.stream(Util.getOneDArray(inputs[0])).boxed().collect(Collectors.toList())
+                , Util.getTwoDList(inputs[1])
+                , Arrays.stream(Util.getOneDArray(inputs[2])).boxed().collect(Collectors.toList()));
         Util.print(n);
     }
 
