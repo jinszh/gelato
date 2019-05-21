@@ -4,6 +4,8 @@ import gelato.leet7.*;
 import gelato.util.Util;
 import org.junit.Test;
 
+import java.util.stream.IntStream;
+
 public class lee7 extends LeetTests{
     @Test
     public void test713() {
@@ -16,6 +18,15 @@ public class lee7 extends LeetTests{
     public void test718() {
         findLength t = new findLength();
         int n = t.findLength_im(Util.getOneDArray("[1,2,3,2,1]"), Util.getOneDArray("[3,2,1,4,7]"));
+        print(n);
+    }
+
+    @Test
+    public void test719() {
+        smallestDistancePair t = new smallestDistancePair();
+        int n = t.smallestDistancePair(Util.getOneDArray("[1,3,1]"), 1);
+        String [] inputs = Util.readFromFile("719.txt");
+   //     int n = t.smallestDistancePair(Util.getOneDArray(inputs[0]), Integer.parseInt(inputs[1]));
         print(n);
     }
 

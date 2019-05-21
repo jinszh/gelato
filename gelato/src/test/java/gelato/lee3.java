@@ -26,4 +26,11 @@ public class lee3 extends LeetTests{
         int v = f.maxSubArrayLen(new int[]{},10);
         Util.print(v);
     }
+
+    @Test
+    public void test372() {
+        superPow f = new superPow();
+        int v = f.superPow(3714151, new int[]{4,9,1,4,4});
+        Util.print(v);
+    }
 }

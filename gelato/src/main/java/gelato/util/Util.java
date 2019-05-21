@@ -189,6 +189,22 @@ public class Util {
         return a * (b / gcd(a, b));
     }
 
+    public static List<List<Integer>> getTwoDList(String in) {
+        String[][] dss = get2DObj(in);
+        int [][] inss = new int[dss.length][];
+        int i = 0;
+        List<List<Integer>> res = new ArrayList(dss.length);
+        for (String [] s: dss) {
+            List l = new ArrayList(s.length);
+            for (String ss : s ) {
+                l.add(Integer.parseInt(ss));
+            }
+            i++;
+            res.add(l);
+        }
+        return res;
+    }
+
     public static int[][] getTwoDMatrix(String in) {
         String[][] dss = get2DObj(in);
         int [][] inss = new int[dss.length][];

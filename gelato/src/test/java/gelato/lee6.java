@@ -5,9 +5,17 @@ import gelato.util.Util;
 import org.junit.Test;
 import gelato.leet6.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class lee6 extends LeetTests {
+    @Test
+    public void test638() {
+        shoppingOffers t = new shoppingOffers();
+        int n = t.shoppingOffers(Arrays.asList(2,5),Util.getTwoDList("[[3,0,5],[1,2,10]]"), Arrays.asList(3,2));
+        Util.print(n);
+    }
+
     @Test
     public void test654() {
         constructMaximumBinaryTree t = new constructMaximumBinaryTree();
