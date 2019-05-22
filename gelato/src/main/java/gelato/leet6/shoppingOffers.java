@@ -14,17 +14,19 @@ public class shoppingOffers {
             offerCodes[i] = toInt(special.get(i).subList(0, special.get(i).size() - 1));
         }
         for (int i = 1; i <= need; i++) {
-            int minPrice = 0;
-            for(int j = 0, cur = i; cur != 0; j++, cur /= 10){
-                minPrice += price.get(price.size() - 1 - j) * (cur % 10);
-            }
-            for (int j = 0; j < offerCodes.length; j++) {
-                if (less(offerCodes[j], i) &&
-                        (dp[i - offerCodes[j]] + special.get(j).get(special.get(j).size() - 1) < minPrice)) {
-                    minPrice = dp[i - offerCodes[j]] + special.get(j).get(special.get(j).size() - 1);
+            if(less(i, need)) {
+                int minPrice = 0;
+                for (int j = 0, cur = i; cur != 0; j++, cur /= 10) {
+                    minPrice += price.get(price.size() - 1 - j) * (cur % 10);
                 }
+                for (int j = 0; j < offerCodes.length; j++) {
+                    if (less(offerCodes[j], i) &&
+                            (dp[i - offerCodes[j]] + special.get(j).get(special.get(j).size() - 1) < minPrice)) {
+                        minPrice = dp[i - offerCodes[j]] + special.get(j).get(special.get(j).size() - 1);
+                    }
+                }
+                dp[i] = minPrice;
             }
-            dp[i] = minPrice;
         }
         return dp[need];
     }
