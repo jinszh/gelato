@@ -15,6 +15,18 @@ public class lee7 extends LeetTests{
     }
 
     @Test
+    public void test715() {
+        RangeModule t = new RangeModule();
+        t.addRange(6, 8);
+        t.removeRange(7, 8);
+        t.removeRange(8, 9);
+        t.addRange(8, 9);
+        t.removeRange(1, 3);
+        t.addRange(1, 8);
+        print(t.queryRange(2, 9));
+    }
+
+    @Test
     public void test718() {
         findLength t = new findLength();
         int n = t.findLength_im(Util.getOneDArray("[1,2,3,2,1]"), Util.getOneDArray("[3,2,1,4,7]"));
@@ -28,6 +40,24 @@ public class lee7 extends LeetTests{
         String [] inputs = Util.readFromFile("719.txt");
    //     int n = t.smallestDistancePair(Util.getOneDArray(inputs[0]), Integer.parseInt(inputs[1]));
         print(n);
+    }
+
+    @Test
+    public void test732() {
+        MyCalendarThree t = new MyCalendarThree();
+//        String [] input = Util.readFromFile("732.txt");
+//        String [] op1 = input[0].replace("[", "")
+//                .replace("]", "").replace("\"", "").split(",");
+//        String [] op2 = input[1].substring(1, input[1].length() - 2).split("],");
+//        for(int i = 1; i <op2.length; i++){
+//            print(t.book(Util.getOneDArray(op2[i] + "]")[0], Util.getOneDArray(op2[i] + "]")[1]));
+//        }
+        print(t.book_seg(21, 39));
+        print(t.book_seg(37, 48));
+        print(t.book_seg(22, 39));
+        print(t.book_seg(31, 44));
+        print(t.book_seg(20, 27));
+        print(t.book_seg(15, 23));
     }
 
     @Test
