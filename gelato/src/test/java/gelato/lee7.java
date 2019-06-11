@@ -4,9 +4,16 @@ import gelato.leet7.*;
 import gelato.util.Util;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class lee7 extends LeetTests{
+    @Test
+    public void test712() {
+        minimumDeleteSum t = new minimumDeleteSum();
+        int n = t.minimumDeleteSum("sea", "eat");
+        print(n);
+    }
     @Test
     public void test713() {
         numSubarrayProductLessThanK t = new numSubarrayProductLessThanK();
@@ -43,6 +50,13 @@ public class lee7 extends LeetTests{
     }
 
     @Test
+    public void test721() {
+        accountsMerge t = new accountsMerge();
+        List n = t.accountsMerge(Util.get2DList("[[\"John\", \"johnsmith@mail.com\", \"john00@mail.com\"], [\"John\", \"johnnybravo@mail.com\"], [\"John\", \"johnsmith@mail.com\", \"john_newyork@mail.com\"], [\"Mary\", \"mary@mail.com\"]]", String.class));
+        print(n);
+    }
+
+    @Test
     public void test732() {
         MyCalendarThree t = new MyCalendarThree();
 //        String [] input = Util.readFromFile("732.txt");
@@ -58,6 +72,15 @@ public class lee7 extends LeetTests{
         print(t.book_seg(31, 44));
         print(t.book_seg(20, 27));
         print(t.book_seg(15, 23));
+    }
+
+    @Test
+    public void test737() {
+        areSentencesSimilarTwo t = new areSentencesSimilarTwo();
+        boolean n = t.areSentencesSimilarTwo(Util.get1dStr("[\"great\",\"acting\",\"skills\"]")
+        ,Util.get1dStr("[\"fine\",\"drama\",\"talent\"]")
+        ,Util.get2DList("[[\"great\",\"good\"],[\"fine\",\"good\"],[\"drama\",\"acting\"],[\"skills\",\"talent\"]]", String.class));
+        print(n);
     }
 
     @Test

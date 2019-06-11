@@ -12,18 +12,31 @@ import java.util.List;
 import static org.junit.Assert.assertTrue;
 
 public class lee2 extends LeetTests {
-
-    @Test
-    public void test215() {
-        findKthLargest f = new findKthLargest();
-        int v = f.findKthLargest_par(Util.getOneDArray("[3,2,3,1,2,4,5,5,6,7,7,8,2,3,1,1,1,10,11,5,6,2,4,7,8,5,6]"), 20);
-        Util.print(v);
-    }
-
     @Test
     public void test294() {
         canWin f = new canWin();
         boolean v = f.canWin("+++-----+++++---+++++++++++++++");
+        Util.print(v);
+    }
+
+    @Test
+    public void test267(){
+        generatePalindromes f = new generatePalindromes();
+        List<String> v = f.generatePalindromes("civic");
+        Util.print(v);
+    }
+
+    @Test
+    public void test256() {
+        threeSumSmaller f = new threeSumSmaller();
+        int v = f.threeSumSmaller(new int[]{-2,0,1,2}, 6);
+        Util.print(v);
+    }
+
+    @Test
+    public void test253(){
+        minMeetingRooms f = new minMeetingRooms();
+        int v = f.minMeetingRooms(Util.getTwoDMatrix("[0,5],[2,4],[1,3],[3,5]"));
         Util.print(v);
     }
     @Test
@@ -32,7 +45,12 @@ public class lee2 extends LeetTests {
         int [] v = f.productExceptSelf_fast(Util.getOneDArray("[1,2,3,4]"));
         Util.print(v);
     }
-
+    @Test
+    public void test215() {
+        findKthLargest f = new findKthLargest();
+        int v = f.findKthLargest_par(Util.getOneDArray("[3,2,3,1,2,4,5,5,6,7,7,8,2,3,1,1,1,10,11,5,6,2,4,7,8,5,6]"), 20);
+        Util.print(v);
+    }
     @Test
     public void test209(){
         minSubArrayLen f = new minSubArrayLen();

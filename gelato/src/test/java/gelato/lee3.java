@@ -63,4 +63,11 @@ public class lee3 extends LeetTests{
         int v = f.sumRange(1 , 1);
         Util.print(v);
     }
+
+    @Test
+    public void test323() {
+        countComponents f = new countComponents();
+        Util.print(f.countComponents_my(5, Util.getTwoDMatrix("[[0,1],[1,2],[0,2],[3,4]]")));
+        Util.print(f.cnter);
+    }
 }

@@ -20,6 +20,13 @@ public class lee1 extends LeetTests{
         Util.print(test.poll());
     }
     @Test
+    public void test130(){
+        SurroundedRegions f = new SurroundedRegions();
+        char [][] in = Util.get2Dchars("[[\"X\",\"O\",\"X\",\"O\",\"O\",\"O\",\"O\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"O\",\"O\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"X\",\"O\"],[\"O\",\"O\",\"O\",\"O\",\"X\",\"O\",\"X\"],[\"O\",\"X\",\"O\",\"O\",\"O\",\"O\",\"O\"],[\"O\",\"O\",\"O\",\"O\",\"O\",\"O\",\"O\"],[\"O\",\"X\",\"O\",\"O\",\"O\",\"O\",\"O\"]]");
+        f.solve(in);
+        Util.print(in);
+    }
+    @Test
     public void test152(){
         maxProduct f = new maxProduct();
         int v = f.maxProduct(Util.getOneDArray("[-9]"));

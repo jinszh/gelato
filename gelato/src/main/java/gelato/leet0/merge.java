@@ -1,9 +1,6 @@
 package gelato.leet0;
 
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 //56
 public class merge {
@@ -33,4 +30,25 @@ public class merge {
     }
 
     TreeMap<Integer, Integer> map = new TreeMap<>();
+
+    public int[][] merge2(int[][] intervals) {
+        if(intervals.length > 0) {
+            Arrays.sort(intervals, (o1, o2) -> Integer.compare(o1[0], o2[0]));
+            List<int[]> res = new ArrayList<>();
+            int start = intervals[0][0];
+            int end = intervals[0][1];
+            for (int i = 1; i < intervals.length; i++) {
+                if (intervals[i][0] <= end) {
+                    end = Math.max(end, intervals[i][1]);
+                }else {
+                    res.add(new int[]{start, end});
+                    start = intervals[i][0];
+                    end = intervals[i][1];
+                }
+            }
+            res.add(new int[]{start, end});
+            return res.toArray(new int[res.size()][]);
+        }
+        return new int[][]{};
+    }
 }

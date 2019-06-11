@@ -92,9 +92,23 @@ public class lee5 extends LeetTests {
     }
 
     @Test
+    public void test583(){
+        minDistance f = new minDistance();
+        int v =f.minDistance("a", "b");
+        Util.print(v);
+    }
+
+    @Test
     public void test560(){
         subarraySum f = new subarraySum();
         int v =f.subarraySum(Util.getOneDArray("[1]"), 0);
+        Util.print(v);
+    }
+
+    @Test
+    public void test547(){
+        findCircleNum f = new findCircleNum();
+        int v =f.findCircleNum(Util.getTwoDMatrix("[[1,1,1],[1,1,1],[1,1,1]]"));
         Util.print(v);
     }
 

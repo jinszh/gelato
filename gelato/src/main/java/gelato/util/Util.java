@@ -7,6 +7,8 @@ import gelato.model.TreeNode;
 import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Array;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.util.*;
 import java.util.List;
@@ -189,15 +191,19 @@ public class Util {
         return a * (b / gcd(a, b));
     }
 
-    public static List<List<Integer>> getTwoDList(String in) {
+    public static <T> List<List<T>> get2DList(String in, Class<T> clazz) {
         String[][] dss = get2DObj(in);
         int [][] inss = new int[dss.length][];
         int i = 0;
-        List<List<Integer>> res = new ArrayList(dss.length);
+        List<List<T>> res = new ArrayList(dss.length);
         for (String [] s: dss) {
             List l = new ArrayList(s.length);
             for (String ss : s ) {
-                l.add(Integer.parseInt(ss));
+                if(clazz.getSimpleName().equals("Integer")) {
+                    l.add(Integer.parseInt(ss));
+                }else {
+                    l.add(ss);
+                }
             }
             i++;
             res.add(l);
@@ -232,6 +238,17 @@ public class Util {
                     inss[i][j++] = (T) (Character) ss.charAt(0);
                 }
                 i++;
+            }
+        }
+        return inss;
+    }
+
+    public static char[][] get2Dchars(String in) {
+        String[][] dss = get2DObj(in);
+        char[][] inss = new char[dss.length][dss[0].length];
+        for (int i = 0; i < dss.length; i++) {
+            for (int j = 0; j < dss[0].length; j++) {
+                inss[i][j] = dss[i][j].charAt(0);
             }
         }
         return inss;
