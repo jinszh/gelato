@@ -6,6 +6,14 @@ import org.junit.Test;
 
 public class lee3 extends LeetTests{
     @Test
+    public void test392() {
+        isSubsequence f = new isSubsequence();
+        boolean v = f.isSubsequence("wdmbatbcewwittubryrqwwrvfkrmniomofygybeqfzusrgeart",
+                "iwdlcxpyagegrcnrcylxolxlnhhwnxyzltiscrjztiivnpnzlubzpueihinsqdfvypdteztiodbhaqhxskupwulvkzhczdyoouym");
+        Util.print(v);
+    }
+
+    @Test
     public void test375() {
         getMoneyAmount f = new getMoneyAmount();
         int v = f.getMoneyAmount(5);

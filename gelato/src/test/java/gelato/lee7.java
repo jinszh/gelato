@@ -20,7 +20,12 @@ public class lee7 extends LeetTests{
         int n = t.numSubarrayProductLessThanK(Util.getOneDArray("[10,5,2,6]"), 100);
         print(n);
     }
-
+    @Test
+    public void test714() {
+        maxProfit t = new maxProfit();
+        int n = t.maxProfit(Util.getOneDArray("[1,3,2,8,4,9]"), 2);
+        print(n);
+    }
     @Test
     public void test715() {
         RangeModule t = new RangeModule();
@@ -94,6 +99,14 @@ public class lee7 extends LeetTests{
     public void test774() {
         minmaxGasDist t = new minmaxGasDist();
         double n = t.minmaxGasDist(Util.getOneDArray("[1,2,3,4,5,6,7,8,9,10]"), 9);
+        print(n);
+    }
+
+    @Test
+    public void test792() {
+        numMatchingSubseq t = new numMatchingSubseq();
+        int n = t.numMatchingSubseq_parallel("iwdlcxpyagegrcnrcylxolxlnhhwnxyzltiscrjztiivnpnzlubzpueihinsqdfvypdteztiodbhaqhxskupwulvkzhczdyoouym"
+                , new String[]{"wdmbatbcewwittubryrqwwrvfkrmniomofygybeqfzusrgeart"});
         print(n);
     }
 }
