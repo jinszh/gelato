@@ -1,4 +1,4 @@
-package conc;
+package org.lemona.conc;
 
 import java.util.*;
 import java.util.concurrent.*;
