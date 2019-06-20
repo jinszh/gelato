@@ -12,6 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="lemona" target="1.8" />
+      <module name="Lemona" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

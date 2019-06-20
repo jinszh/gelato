@@ -96,6 +96,13 @@ public class lee7 extends LeetTests{
     }
 
     @Test
+    public void test767() {
+        reorganizeString t = new reorganizeString();
+        String n = t.reorganizeString2("fafafafaguguumm");
+        print(n);
+    }
+
+    @Test
     public void test774() {
         minmaxGasDist t = new minmaxGasDist();
         double n = t.minmaxGasDist(Util.getOneDArray("[1,2,3,4,5,6,7,8,9,10]"), 9);

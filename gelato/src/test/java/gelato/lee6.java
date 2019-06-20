@@ -15,6 +15,12 @@ public class lee6 extends LeetTests {
         addBoldTag t = new addBoldTag();
         Util.print(t.addBoldTag("abcdef", Util.get1dStr("[\"ab\",\"bc\",\"cd\",\"de\",\"ef\",\"fg\",\"gh\"]")));
     }
+
+    @Test
+    public void test621() {
+        leastInterval t = new leastInterval();
+        Util.print(t.leastInterval(new char[]{'A','A','A','B','B','B'}, 2));
+    }
     @Test
     public void test638() {
         shoppingOffers t = new shoppingOffers();
