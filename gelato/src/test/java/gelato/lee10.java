@@ -8,6 +8,12 @@ import org.junit.Test;
 
 public class lee10 extends LeetTests {
     @Test
+    public void test1040() {
+        numMovesStonesII t = new numMovesStonesII();
+        int [] n = t.numMovesStonesII(new int[]{1,20,21,24});
+        print(n);
+    }
+    @Test
     public void test1020() {
         numEnclaves t = new numEnclaves();
         int n = t.numEnclaves(Util.getTwoDMatrix("[[0,0,0,1,1,1,0,1,0,0],[1,1,0,0,0,1,0,1,1,1],[0,0,0,1,1,1,0,1,0,0],[0,1,1,0,0,0,1,0,1,0],[0,1,1,1,1,1,0,0,1,0],[0,0,1,0,1,1,1,1,0,1],[0,1,1,0,0,0,1,1,1,1],[0,0,1,0,0,1,0,1,0,1],[1,0,1,0,1,1,0,0,0,0],[0,0,0,0,1,1,0,0,0,1]]"));

@@ -42,7 +42,7 @@ public class numMovesStonesII {
         int high = Math.max(A[n - 1] - n + 2 - A[1], A[n - 2] - A[0] - n + 2);
         for (int j = 0; j < n; ++j) {
             while (A[j] - A[i] >= n) ++i;
-            if (j - i + 1 == n - 1 && A[j] - A[i] == n - 2)
+            if (j - i + 1 == n - 1 && A[j] - A[i] == n - 2) //前面的数已经排好了 就差最后一个数, 这是特殊情况, 需要搬两次, 而不是n - 覆盖的个数
                 low = Math.min(low, 2);
             else
                 low = Math.min(low, n - (j - i + 1));

@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026a4489-42dc-4026-9edc-4ade48f30e7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lemona.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/SpiralMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/generateMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet10/numMovesStonesII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet6/leastInterval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet7/reorganizeString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee0.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee6.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee7.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/devUtil/DevUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/threeSumClosest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/findCelebrity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet6/triangleNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet10/numMovesStonesII.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet10/numMovesStonesII.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet7/smallestDistancePair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet7/smallestDistancePair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee10.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
