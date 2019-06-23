@@ -2,14 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026a4489-42dc-4026-9edc-4ade48f30e7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/devUtil/DevUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/threeSumClosest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/findCelebrity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet6/triangleNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/rotateImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/searchRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/detectCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/findMissingRanges.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/WordDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/ZigzagIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/findDuplicate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/shortestWordDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/summaryRanges228.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet3/NestedIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet3/sortTransformedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet4/circularArrayLoop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet5/arrayNesting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet8/largestOverlap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet8/numRescueBoats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet8/pushDominoes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet9/bagOfTokensScore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet10/numMovesStonesII.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet10/numMovesStonesII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet7/smallestDistancePair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet7/smallestDistancePair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/devUtil/DevUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/devUtil/DevUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/threeSumClosest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/threeSumClosest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="957" selection-start-line="957" selection-end-line="957" />
+            <state relative-caret-position="24">
+              <caret line="953" selection-start-line="953" selection-end-line="953" />
               <folding>
                 <element signature="e#30670#30671#0" expanded="true" />
                 <element signature="e#30707#30708#0" expanded="true" />
@@ -97,6 +115,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1943" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -177,8 +201,11 @@
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="903000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35870445" />
@@ -213,5 +240,20 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="953" selection-start-line="953" selection-end-line="953" />
+          <folding>
+            <element signature="e#30670#30671#0" expanded="true" />
+            <element signature="e#30707#30708#0" expanded="true" />
+            <element signature="e#31007#31008#0" expanded="true" />
+            <element signature="e#31039#31040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

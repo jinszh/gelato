@@ -18,7 +18,11 @@ public class lee2 extends LeetTests {
         boolean v = f.canWin("+++-----+++++---+++++++++++++++");
         Util.print(v);
     }
-
+    @Test
+    public void test287() {
+        findDuplicate f = new findDuplicate();
+        Util.print(f.findDuplicate3(new int[]{3, 5, 2, 1, 1, 4}));
+    }
     @Test
     public void test267(){
         generatePalindromes f = new generatePalindromes();
@@ -45,6 +49,13 @@ public class lee2 extends LeetTests {
         int [] v = f.productExceptSelf_fast(Util.getOneDArray("[1,2,3,4]"));
         Util.print(v);
     }
+    @Test
+    public void test228() {
+        summaryRanges228 f = new summaryRanges228();
+        List v = f.summaryRanges(Util.getOneDArray("[-2,-1,1,2,2147483646,2147483647]"));
+        Util.print(v);
+    }
+
     @Test
     public void test215() {
         findKthLargest f = new findKthLargest();

@@ -6,6 +6,12 @@ import org.junit.Test;
 
 public class lee8 extends LeetTests{
     @Test
+    public void test838() {
+        pushDominoes t = new pushDominoes();
+        print(t.pushDominoes(".L.R...LR..L.."));
+    }
+
+    @Test
     public void test870() {
         advantageCount t = new advantageCount();
         int [] n = t.advantageCount(Util.getOneDArray("[28,47,45,8,2,10,25,35,43,37,33,30,33,20,33,42,43,36,34,3,16,23,15,10,19,42,13,47,0,21,36,38,0,5,3,28,4,20,14,5,19,22,29,17,3,16,35,0,26,0]")

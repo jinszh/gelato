@@ -15,6 +15,13 @@ public class lee4  extends LeetTests{
     }
 
     @Test
+    public void test457() {
+        circularArrayLoop f = new circularArrayLoop();
+        boolean v = f.circularArrayLoop(new int[]{-1,-1,-1});
+        Util.print(v);
+    }
+
+    @Test
     public void test464() {
         canIWin f = new canIWin();
         boolean v = f.canIWin(10, 0);

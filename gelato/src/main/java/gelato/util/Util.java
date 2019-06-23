@@ -17,6 +17,21 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Util {
     public static Long timer;
     public static ReentrantLock timerLock = new ReentrantLock();
+    public static ListNode [] getTestListNodes(int [] data){
+        ListNode [] res = new ListNode[data.length];
+        ListNode prev = null;
+        for(int i = 0 ; i< data.length; i++) {
+            if(prev == null) {
+                prev = new ListNode(data[i]);
+            }else{
+                prev.next = new ListNode(data[i]);
+                prev = prev.next;
+            }
+            res[i] = prev;
+        }
+        return res;
+    }
+
     public static ListNode getTestListNode(int [] data){
         ListNode head = null;
         ListNode prev = null;

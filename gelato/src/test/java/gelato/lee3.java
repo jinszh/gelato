@@ -28,6 +28,12 @@ public class lee3 extends LeetTests{
     }
 
     @Test
+    public void test360() {
+        sortTransformedArray f = new sortTransformedArray();
+        Util.print(f.sortTransformedArray(Util.getOneDArray("[-99,-98,-94,-93,-93,-93,-88,-83,-77,-77,-77,-74,-74,-72,-71,-70,-67,-64,-63,-62,-61,-58,-56,-54,-54,-53,-51,-51,-50,-48,-46,-45,-42,-41,-35,-31,-22,-22,-20,-20,-16,-16,-12,-11,-8,-3,-2,-1,0,1,3,4,6,9,10,11,11,11,12,13,26,27,29,31,32,34,36,42,48,49,54,56,59,62,62,65,65,69,70,72,73,74,75,82,85,86,91,92,92,97,98]"), 13,22,-16));
+    }
+
+    @Test
     public void test325() {
         maxSubArrayLen f = new maxSubArrayLen();
         int v = f.maxSubArrayLen(new int[]{},10);

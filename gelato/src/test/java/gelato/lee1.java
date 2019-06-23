@@ -1,6 +1,7 @@
 package gelato;
 
 import gelato.leet1.*;
+import gelato.model.ListNode;
 import gelato.model.TreeNode;
 import gelato.util.Util;
 import org.junit.Test;
@@ -25,6 +26,14 @@ public class lee1 extends LeetTests{
         char [][] in = Util.get2Dchars("[[\"X\",\"O\",\"X\",\"O\",\"O\",\"O\",\"O\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"O\",\"O\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"X\",\"O\"],[\"O\",\"O\",\"O\",\"O\",\"X\",\"O\",\"X\"],[\"O\",\"X\",\"O\",\"O\",\"O\",\"O\",\"O\"],[\"O\",\"O\",\"O\",\"O\",\"O\",\"O\",\"O\"],[\"O\",\"X\",\"O\",\"O\",\"O\",\"O\",\"O\"]]");
         f.solve(in);
         Util.print(in);
+    }
+
+    @Test
+    public void test142(){
+        detectCycle f = new detectCycle();
+        ListNode [] listNodes  = Util.getTestListNodes(new int[]{3,2,0,-4});
+        listNodes[3].next = listNodes[1];
+        Util.print(f.detectCycle(listNodes[0]));
     }
     @Test
     public void test152(){
