@@ -13,6 +13,7 @@ import java.text.ParseException;
 import java.util.*;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.stream.IntStream;
 
 public class Util {
     public static Long timer;
@@ -82,6 +83,8 @@ public class Util {
                 print(o);
                 print(" ; ");
             }
+        }else if(v instanceof TreeNode){
+            print(((TreeNode) v).val);
         }else{
             System.out.print(v);
         }
@@ -149,21 +152,43 @@ public class Util {
         }
         return array;
     }
+
     public static TreeNode getTestTree(Integer [] data){
+        return getTestTree(data, null)[0];
+    }
+
+    public static TreeNode [] getTestTree(Integer [] data, Integer [] interest) {
+        if(interest == null){
+            interest = new Integer[0];
+        }
+        TreeNode [] res = new TreeNode[interest == null ? 1 : interest.length + 1];
         TreeNode root = null;
-        if(data != null && data.length > 0 && data[0] != null) {
+        if (data != null && data.length > 0 && data[0] != null) {
             root = new TreeNode(data[0]);
+            for(int i = 0 ; i< interest.length; i++){
+                if(root != null && root.val == interest[i]){
+                    res[i + 1] = root;
+                }
+            }
             Deque<TreeNode> que = new ArrayDeque<>();
             que.push(root);
             int k = 1;
-            while (k < data.length){
+            while (k < data.length) {
                 TreeNode l = data[k] == null ? null : new TreeNode(data[k]);
-                if(l != null){
+                if (l != null) {
                     que.offerLast(l);
                 }
-                TreeNode r = data[k + 1] == null ? null : new TreeNode(data[k + 1]);
-                if(r != null){
+                TreeNode r = (k + 1 == data.length || data[k + 1] == null) ? null : new TreeNode(data[k + 1]);
+                if (r != null) {
                     que.offerLast(r);
+                }
+                for(int i = 0 ; i< interest.length; i++){
+                    if(l != null && l.val == interest[i]){
+                        res[i + 1] = l;
+                    }
+                    if(r != null && r.val == interest[i]){
+                        res[i + 1] = r;
+                    }
                 }
                 TreeNode par = que.pollFirst();
                 par.left = l;
@@ -171,7 +196,8 @@ public class Util {
                 k += 2;
             }
         }
-        return root;
+        res[0] = root;
+        return res;
     }
 
     public static TreeNode getTestTreeByArray(Integer [] data) {
@@ -293,4 +319,5 @@ public class Util {
         }
         System.out.println();
     }
+
 }

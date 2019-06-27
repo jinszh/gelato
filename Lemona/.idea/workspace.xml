@@ -2,32 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026a4489-42dc-4026-9edc-4ade48f30e7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/rotateImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/searchRange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/detectCycle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/findMissingRanges.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/WordDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/ZigzagIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/findDuplicate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/shortestWordDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/summaryRanges228.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet3/NestedIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet3/sortTransformedArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet4/circularArrayLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet5/arrayNesting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet8/largestOverlap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet8/numRescueBoats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet8/pushDominoes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet9/bagOfTokensScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/generateTrees.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/inorderTraversal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/isValidBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/numDecodings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/numTrees.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/BSTIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/preorderTraversal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/reverseWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/reverseWords2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet1/upsideDownBinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/PeekingIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/Vector2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/diffWaysToCompute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/findStrobogrammatic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/inorderSuccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/kthSmallest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet2/verifyPreorder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet3/HitCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet3/MiniParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet3/depthSumInverse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet4/parseTernary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet4/treeToDoublyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet4/validIPAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet5/inorderSuccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet5/longestLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet5/optimalDivision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet6/LogSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet6/checkValidString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet6/maxAreaOfIsland.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet6/maximumSwap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet6/nextClosestTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet7/removeComments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet9/beautifulArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/model/NestedInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gelato/src/main/resources/285.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/devUtil/DevUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/devUtil/DevUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/threeSumClosest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/leet0/threeSumClosest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/model/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/model/TreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gelato/src/main/java/gelato/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/main/java/gelato/util/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee6.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee7.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee9.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gelato/src/test/java/gelato/lee9.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,11 +135,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1943" />
-    <option name="height" value="1043" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="463" />
+    <option name="y" value="265" />
+    <option name="width" value="1382" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -205,7 +224,7 @@
     <option name="totallyTimeSpent" value="903000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35870445" />

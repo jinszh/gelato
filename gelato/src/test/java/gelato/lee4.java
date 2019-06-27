@@ -8,6 +8,18 @@ import java.util.List;
 
 public class lee4  extends LeetTests{
     @Test
+    public void test426() {
+        treeToDoublyList f = new treeToDoublyList();
+        Util.print(f.treeToDoublyList(Util.getTestTree(Util.getOneDIntegerArray("[4,2,5,1,3]"))));
+    }
+
+    @Test
+    public void test439() {
+        parseTernary f = new parseTernary();
+        Util.print(f.parseTernary("F?T?4:5:T?F?6:8:7"));
+    }
+
+    @Test
     public void test454() {
         fourSumCount f = new fourSumCount();
         int v = f.fourSumCount(new int[]{1,2}, new int[]{-2,-1}, new int[]{-1,2}, new int[]{0,2});

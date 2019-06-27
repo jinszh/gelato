@@ -62,6 +62,13 @@ public class lee7 extends LeetTests{
     }
 
     @Test
+    public void test722() {
+        removeComments t = new removeComments();
+        List n = t.removeComments(Util.get1dStr("[\"a/*/b//*c\",\"blank\",\"d/*/e*//f\"]"));
+        print(n);
+    }
+
+    @Test
     public void test732() {
         MyCalendarThree t = new MyCalendarThree();
 //        String [] input = Util.readFromFile("732.txt");

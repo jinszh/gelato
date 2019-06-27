@@ -3,6 +3,7 @@ package gelato;
 import gelato.leet2.*;
 import gelato.leet2.shortestPalindrome;
 import gelato.leet2.ConcatenatedWords;
+import gelato.model.TreeNode;
 import gelato.util.Trie;
 import gelato.util.Util;
 import org.junit.Test;
@@ -24,6 +25,13 @@ public class lee2 extends LeetTests {
         Util.print(f.findDuplicate3(new int[]{3, 5, 2, 1, 1, 4}));
     }
     @Test
+    public void test285() {
+        inorderSuccessor f = new inorderSuccessor();
+        String[] input = Util.readFromFile("285.txt");
+        TreeNode[] dt = Util.getTestTree(Util.getOneDIntegerArray(input[0]), new Integer[]{1209});
+        Util.print(f.inorderSuccessor(dt[0], dt[1]));
+    }
+    @Test
     public void test267(){
         generatePalindromes f = new generatePalindromes();
         List<String> v = f.generatePalindromes("civic");
@@ -41,6 +49,18 @@ public class lee2 extends LeetTests {
     public void test253(){
         minMeetingRooms f = new minMeetingRooms();
         int v = f.minMeetingRooms(Util.getTwoDMatrix("[0,5],[2,4],[1,3],[3,5]"));
+        Util.print(v);
+    }
+    @Test
+    public void test247(){
+        findStrobogrammatic f = new findStrobogrammatic();
+        List v = f.findStrobogrammatic(2);
+        Util.print(v);
+    }
+    @Test
+    public void test241(){
+        diffWaysToCompute f = new diffWaysToCompute();
+        List v = f.diffWaysToCompute("2*3-4*5");
         Util.print(v);
     }
     @Test

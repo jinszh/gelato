@@ -41,4 +41,10 @@ public class lee1 extends LeetTests{
         int v = f.maxProduct(Util.getOneDArray("[-9]"));
         Util.print(v);
     }
+
+    @Test
+    public void test156(){
+        upsideDownBinaryTree f = new upsideDownBinaryTree();
+        Util.print(f.upsideDownBinaryTree(Util.getTestTree(new Integer[]{1,2,3,4,5})));
+    }
 }

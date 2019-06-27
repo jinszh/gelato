@@ -143,4 +143,9 @@ public class lee9 extends LeetTests {
         boolean n = f.isRationalEqual_w1("0.05(25)", "0.0(52)");
         Util.print(n);
     }
+    @Test
+    public void test932() {
+        beautifulArray f = new beautifulArray();
+        Util.print(f.beautifulArray(10));
+    }
 }

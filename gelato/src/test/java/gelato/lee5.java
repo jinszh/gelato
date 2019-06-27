@@ -106,6 +106,12 @@ public class lee5 extends LeetTests {
     }
 
     @Test
+    public void test553(){
+        optimalDivision f = new optimalDivision();
+        Util.print(f.optimalDivision(Util.getOneDArray("[1000,100,10,2]")));
+    }
+
+    @Test
     public void test547(){
         findCircleNum f = new findCircleNum();
         int v =f.findCircleNum(Util.getTwoDMatrix("[[1,1,1],[1,1,1],[1,1,1]]"));

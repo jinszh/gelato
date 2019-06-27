@@ -50,6 +50,16 @@ public class lee6 extends LeetTests {
         List n = t.findClosestElements_OLgN(new int[]{1,2,7,8,9}, 2, 6);
         Util.print(n);
     }
+    @Test
+    public void test670() {
+        maximumSwap t = new maximumSwap();
+        Util.print(t.maximumSwap(98368));
+    }
+    @Test
+    public void test678() {
+        checkValidString t = new checkValidString();
+        Util.print(t.checkValidString_dp("(((((((((((((***********))))"));
+    }
 
     @Test
     public void test685() {
