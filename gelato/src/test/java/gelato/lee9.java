@@ -143,6 +143,13 @@ public class lee9 extends LeetTests {
         boolean n = f.isRationalEqual_w1("0.05(25)", "0.0(52)");
         Util.print(n);
     }
+
+    @Test
+    public void test971() {
+        flipMatchVoyage f = new flipMatchVoyage();
+        Util.print(f.flipMatchVoyage(Util.getTestTree(new Integer[]{1,2,3,4,5}), new int[]{1,2,5,4,3}));
+    }
+
     @Test
     public void test932() {
         beautifulArray f = new beautifulArray();

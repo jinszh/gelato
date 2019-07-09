@@ -92,6 +92,12 @@ public class lee5 extends LeetTests {
     }
 
     @Test
+    public void test592(){
+        fractionAddition f = new fractionAddition();
+        Util.print(f.fractionAddition("1/3 - 1/2"));
+    }
+
+    @Test
     public void test583(){
         minDistance f = new minDistance();
         int v =f.minDistance("a", "b");
@@ -139,5 +145,12 @@ public class lee5 extends LeetTests {
         String [] inputs = Util.readFromFile("523");
         boolean c =f.checkSubarraySum(Util.getOneDArray(inputs[0]) , Integer.parseInt(inputs[1]));
         Util.print(c);
+    }
+
+    @Test
+    public void test516(){
+        longestPalindromeSubseq f = new longestPalindromeSubseq();
+        Util.println(f.longestPalindromeSubseq("abbabba"));
+        Util.print(f.cnt);
     }
 }

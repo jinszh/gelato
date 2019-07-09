@@ -1,7 +1,7 @@
 package gelato;
 
 import gelato.basic.FindMaxOverlap;
-import gelato.basic.QSort;
+import gelato.basic.SortUtil;
 import gelato.util.Util;
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ public class basicTests extends LeetTests {
 
     @Test
     public void testQuickSort(){
-        QSort f = new QSort();
+        SortUtil f = new SortUtil();
         int [] arr = new int[]{1,2,2,0};
         f.QSort(arr);
         Util.print(arr);

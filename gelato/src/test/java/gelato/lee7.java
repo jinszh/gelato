@@ -4,6 +4,7 @@ import gelato.leet7.*;
 import gelato.util.Util;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -100,6 +101,25 @@ public class lee7 extends LeetTests{
         dailyTemperatures t = new dailyTemperatures();
         int [] n = t.dailyTemperatures(Util.getOneDArray("[73,74,75,71,69,72,76,73]"));
         print(n);
+    }
+
+    @Test
+    public void test740() {
+        deleteAndEarn t = new deleteAndEarn();
+        print(t.deleteAndEarn(Util.getOneDArray("[3,4,2]")));
+    }
+
+    @Test
+    public void test756() {
+        pyramidTransition t = new pyramidTransition();
+        print(t.pyramidTransition_bk("BDBBAA"
+                , Arrays.asList(Util.get1dStr("[\"ACB\",\"ACA\",\"AAA\"" +
+                        ",\"ACD\",\"BCD\",\"BAA\",\"BCB\",\"BCC\",\"BAD\",\"BAB\"" +
+                        ",\"BAC\",\"CAB\",\"CCD\",\"CAA\",\"CCA\",\"CCC\",\"CAD\",\"DAD\"" +
+                        ",\"DAA\",\"DAC\",\"DCD\",\"DCC\",\"DCA\",\"DDD\",\"BDD\",\"ABB\",\"ABC\"" +
+                        ",\"ABD\",\"BDB\",\"BBD\",\"BBC\",\"BBA\",\"ADD\",\"ADC\",\"ADA\",\"DDC\",\"DDB\"" +
+                        ",\"DDA\",\"CDA\",\"CDD\",\"CBA\",\"CDB\",\"CBD\",\"DBA\",\"DBC\",\"DBD\",\"BDA\"]"))));
+        print(t.cnt);
     }
 
     @Test

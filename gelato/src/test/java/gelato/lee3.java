@@ -26,7 +26,11 @@ public class lee3 extends LeetTests{
         int v = f.superPow(3714151, new int[]{4,9,1,4,4});
         Util.print(v);
     }
-
+    @Test
+    public void test365() {
+        canMeasureWater f = new canMeasureWater();
+        Util.print(f.canMeasureWater(2,7,5));
+    }
     @Test
     public void test360() {
         sortTransformedArray f = new sortTransformedArray();
@@ -37,6 +41,13 @@ public class lee3 extends LeetTests{
     public void test325() {
         maxSubArrayLen f = new maxSubArrayLen();
         int v = f.maxSubArrayLen(new int[]{},10);
+        Util.print(v);
+    }
+
+    @Test
+    public void test313() {
+        nthSuperUglyNumber f = new nthSuperUglyNumber();
+        int v = f.nthSuperUglyNumber(12, new int[]{2,7,13,19});
         Util.print(v);
     }
 

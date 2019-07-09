@@ -8,6 +8,7 @@ import gelato.util.Trie;
 import gelato.util.Util;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -32,6 +33,12 @@ public class lee2 extends LeetTests {
         Util.print(f.inorderSuccessor(dt[0], dt[1]));
     }
     @Test
+    public void test271(){
+        Codec f = new Codec();
+        Util.print(f.encode(Arrays.asList("Hello", "World")));
+        Util.print(f.decode("2,5,5,HelloWorld"));
+    }
+    @Test
     public void test267(){
         generatePalindromes f = new generatePalindromes();
         List<String> v = f.generatePalindromes("civic");
@@ -50,6 +57,11 @@ public class lee2 extends LeetTests {
         minMeetingRooms f = new minMeetingRooms();
         int v = f.minMeetingRooms(Util.getTwoDMatrix("[0,5],[2,4],[1,3],[3,5]"));
         Util.print(v);
+    }
+    @Test
+    public void test249(){
+        groupStrings f = new groupStrings();
+        Util.print(f.groupStrings(Util.get1dStr("[az,ba]")));
     }
     @Test
     public void test247(){
@@ -75,7 +87,16 @@ public class lee2 extends LeetTests {
         List v = f.summaryRanges(Util.getOneDArray("[-2,-1,1,2,2147483646,2147483647]"));
         Util.print(v);
     }
-
+    @Test
+    public void test227() {
+        BasicCalculatorII f = new BasicCalculatorII();
+        Util.print(f.calculate(" 2 * 3 + 4"));
+    }
+    @Test
+    public void test220() {
+        containsNearbyAlmostDuplicate f = new containsNearbyAlmostDuplicate();
+        Util.print(f.containsNearbyAlmostDuplicate(Util.getOneDArray("[1,4,8,1,2]"), 3, 1));
+    }
     @Test
     public void test215() {
         findKthLargest f = new findKthLargest();

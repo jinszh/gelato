@@ -31,11 +31,16 @@ public class lee6 extends LeetTests {
                 , Arrays.stream(Util.getOneDArray(inputs[2])).boxed().collect(Collectors.toList()));
         Util.print(n);
     }
+    @Test
+    public void test640() {
+        solveEquation t = new solveEquation();
+        Util.print(t.solveEquation("1+1=x"));
+    }
 
     @Test
-    public void test649() {
-        predictPartyVictory t = new predictPartyVictory();
-        Util.print(t.predictPartyVictory("RDDRRDDR"));
+    public void test647() {
+        countSubstrings t = new countSubstrings();
+        Util.print(t.countSubstrings_textbook("abba"));
     }
     @Test
     public void test654() {
@@ -49,6 +54,11 @@ public class lee6 extends LeetTests {
         findClosestElements t = new findClosestElements();
         List n = t.findClosestElements_OLgN(new int[]{1,2,7,8,9}, 2, 6);
         Util.print(n);
+    }
+    @Test
+    public void test666() {
+        pathSum t = new pathSum();
+        Util.print(t.pathSum(Util.getOneDArray("[111,217,221,315,415]")));
     }
     @Test
     public void test670() {

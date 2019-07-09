@@ -34,4 +34,10 @@ public class lee8 extends LeetTests{
                 "[142126477]"), 142126479);
         print(n);
     }
+
+    @Test
+    public void test898() {
+        subarrayBitwiseORs t = new subarrayBitwiseORs();
+        print(t.subarrayBitwiseORs(Util.getOneDArray("[1,2,4]")));
+    }
 }
