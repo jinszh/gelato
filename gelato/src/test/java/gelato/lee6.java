@@ -43,6 +43,11 @@ public class lee6 extends LeetTests {
         Util.print(t.countSubstrings_textbook("abba"));
     }
     @Test
+    public void test651() {
+        maxA t = new maxA();
+        Util.print(t.maxA(7));
+    }
+    @Test
     public void test654() {
         constructMaximumBinaryTree t = new constructMaximumBinaryTree();
         TreeNode n = t.constructMaximumBinaryTree(new int[]{3,2,1,6,0,5});

@@ -35,6 +35,17 @@ public class lee1 extends LeetTests{
         listNodes[3].next = listNodes[1];
         Util.print(f.detectCycle(listNodes[0]));
     }
+
+    @Test
+    public void test148() {
+        sortList f = new sortList();
+        ListNode[] listNodes = Util.getTestListNodes(new int[]{4,5,7,-1,4,2,2,8,9,10,3,-2, 2});
+        for (int i = 0; i < listNodes.length - 1; i++) {
+            listNodes[i].next = listNodes[i + 1];
+        }
+        Util.print(f.sortList(listNodes[0]));
+    }
+
     @Test
     public void test152(){
         maxProduct f = new maxProduct();

@@ -33,6 +33,13 @@ public class lee2 extends LeetTests {
         Util.print(f.inorderSuccessor(dt[0], dt[1]));
     }
     @Test
+    public void test280() {
+        wiggleSort f = new wiggleSort();
+        int  [] num = Util.getOneDArray("[3,5,2,1,6,4]");
+        f.wiggleSort(num);
+        Util.print(num);
+    }
+    @Test
     public void test271(){
         Codec f = new Codec();
         Util.print(f.encode(Arrays.asList("Hello", "World")));
@@ -102,6 +109,12 @@ public class lee2 extends LeetTests {
         findKthLargest f = new findKthLargest();
         int v = f.findKthLargest_par(Util.getOneDArray("[3,2,3,1,2,4,5,5,6,7,7,8,2,3,1,1,1,10,11,5,6,2,4,7,8,5,6]"), 20);
         Util.print(v);
+    }
+    @Test
+    public void test211(){
+        WordDictionary f = new WordDictionary();
+        f.addWord("ab");
+        Util.println(f.search("ab"));
     }
     @Test
     public void test209(){

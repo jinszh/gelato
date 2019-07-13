@@ -25,7 +25,11 @@ public class lee4  extends LeetTests{
         int v = f.fourSumCount(new int[]{1,2}, new int[]{-2,-1}, new int[]{-1,2}, new int[]{0,2});
         Util.print(v);
     }
-
+    @Test
+    public void test456() {
+        find132pattern f = new find132pattern();
+        Util.print(f.find132pattern(Util.getOneDArray("[ 6,8,7,10,6]")));
+    }
     @Test
     public void test457() {
         circularArrayLoop f = new circularArrayLoop();

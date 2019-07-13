@@ -85,6 +85,13 @@ public class Util {
             }
         }else if(v instanceof TreeNode){
             print(((TreeNode) v).val);
+        }else if(v instanceof  ListNode){
+            while (v != null){
+                print(((ListNode) v).val);
+                print(",");
+                v = ((ListNode) v).next;
+            }
+            println(".");
         }else{
             System.out.print(v);
         }

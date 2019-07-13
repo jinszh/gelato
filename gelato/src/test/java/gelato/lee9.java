@@ -155,4 +155,16 @@ public class lee9 extends LeetTests {
         beautifulArray f = new beautifulArray();
         Util.print(f.beautifulArray(10));
     }
+
+    @Test
+    public void test923() {
+        threeSumMulti f = new threeSumMulti();
+        Util.print(f.threeSumMulti(Util.getOneDArray("[1,1,2,2,3,3,4,4,5,5]"), 8 ));
+    }
+
+    @Test
+    public void test904() {
+        totalFruit f = new totalFruit();
+        Util.print(f.totalFruit(Util.getOneDArray("[1,2,3,2,2]")));
+    }
 }

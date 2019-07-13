@@ -125,6 +125,12 @@ public class lee5 extends LeetTests {
     }
 
     @Test
+    public void test544(){
+        findContestMatch f = new findContestMatch();
+        Util.print(f.findContestMatch(8));
+    }
+
+    @Test
     public void test535(){
         Codec f = new Codec();
         String c =f.encode("https://leetcode.com/problems/design-tinyurl");
@@ -136,6 +142,14 @@ public class lee5 extends LeetTests {
     public void test525(){
         findMaxLength f = new findMaxLength();
         int c =f.findMaxLength(Util.getOneDArray("[0,0,1,0,0,1,1]"));
+        Util.print(c);
+    }
+
+    @Test
+    public void test524(){
+        findLongestWord f = new findLongestWord();
+        String c =f.findLongestWord("abpcplea"
+                , Arrays.asList(Util.get1dStr("[\"ale\",\"apple\",\"monkey\",\"plea\"]")));
         Util.print(c);
     }
 
