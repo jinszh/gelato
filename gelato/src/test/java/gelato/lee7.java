@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.IntStream;
 
 public class lee7 extends LeetTests{
     @Test
@@ -18,13 +17,13 @@ public class lee7 extends LeetTests{
     @Test
     public void test713() {
         numSubarrayProductLessThanK t = new numSubarrayProductLessThanK();
-        int n = t.numSubarrayProductLessThanK(Util.getOneDArray("[10,5,2,6]"), 100);
+        int n = t.numSubarrayProductLessThanK(Util.get1dIntArray("[10,5,2,6]"), 100);
         print(n);
     }
     @Test
     public void test714() {
         maxProfit t = new maxProfit();
-        int n = t.maxProfit(Util.getOneDArray("[1,3,2,8,4,9]"), 2);
+        int n = t.maxProfit(Util.get1dIntArray("[1,3,2,8,4,9]"), 2);
         print(n);
     }
     @Test
@@ -42,16 +41,16 @@ public class lee7 extends LeetTests{
     @Test
     public void test718() {
         findLength t = new findLength();
-        int n = t.findLength_im(Util.getOneDArray("[1,2,3,2,1]"), Util.getOneDArray("[3,2,1,4,7]"));
+        int n = t.findLength_im(Util.get1dIntArray("[1,2,3,2,1]"), Util.get1dIntArray("[3,2,1,4,7]"));
         print(n);
     }
 
     @Test
     public void test719() {
         smallestDistancePair t = new smallestDistancePair();
-        int n = t.smallestDistancePair(Util.getOneDArray("[1,3,1]"), 1);
+        int n = t.smallestDistancePair(Util.get1dIntArray("[1,3,1]"), 1);
         String [] inputs = Util.readFromFile("719.txt");
-   //     int n = t.smallestDistancePair(Util.getOneDArray(inputs[0]), Integer.parseInt(inputs[1]));
+   //     int n = t.smallestDistancePair(Util.get1dIntArray(inputs[0]), Integer.parseInt(inputs[1]));
         print(n);
     }
 
@@ -77,7 +76,7 @@ public class lee7 extends LeetTests{
 //                .replace("]", "").replace("\"", "").split(",");
 //        String [] op2 = input[1].substring(1, input[1].length() - 2).split("],");
 //        for(int i = 1; i <op2.length; i++){
-//            print(t.book(Util.getOneDArray(op2[i] + "]")[0], Util.getOneDArray(op2[i] + "]")[1]));
+//            print(t.book(Util.get1dIntArray(op2[i] + "]")[0], Util.get1dIntArray(op2[i] + "]")[1]));
 //        }
         print(t.book_seg(21, 39));
         print(t.book_seg(37, 48));
@@ -99,14 +98,14 @@ public class lee7 extends LeetTests{
     @Test
     public void test739() {
         dailyTemperatures t = new dailyTemperatures();
-        int [] n = t.dailyTemperatures(Util.getOneDArray("[73,74,75,71,69,72,76,73]"));
+        int [] n = t.dailyTemperatures(Util.get1dIntArray("[73,74,75,71,69,72,76,73]"));
         print(n);
     }
 
     @Test
     public void test740() {
         deleteAndEarn t = new deleteAndEarn();
-        print(t.deleteAndEarn(Util.getOneDArray("[3,4,2]")));
+        print(t.deleteAndEarn(Util.get1dIntArray("[3,4,2]")));
     }
 
     @Test
@@ -132,10 +131,14 @@ public class lee7 extends LeetTests{
     @Test
     public void test774() {
         minmaxGasDist t = new minmaxGasDist();
-        double n = t.minmaxGasDist(Util.getOneDArray("[1,2,3,4,5,6,7,8,9,10]"), 9);
+        double n = t.minmaxGasDist(Util.get1dIntArray("[1,2,3,4,5,6,7,8,9,10]"), 9);
         print(n);
     }
-
+    @Test
+    public void test785() {
+        isBipartite t = new isBipartite();
+        print(t.isBipartite(Util.getTwoDMatrix("[[1,2,3],[0,3,4],[0,3],[0,1,2],[1]]")));
+    }
     @Test
     public void test792() {
         numMatchingSubseq t = new numMatchingSubseq();

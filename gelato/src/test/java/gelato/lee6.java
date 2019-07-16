@@ -26,9 +26,9 @@ public class lee6 extends LeetTests {
         shoppingOffers t = new shoppingOffers();
         String [] inputs = Util.readFromFile("638.txt");
         //int n = t.shoppingOffers(Arrays.asList(2,5),Util.getTwoDList("[[3,0,5],[1,2,10]]"), Arrays.asList(3,2));
-        int n = t.shoppingOffers_2(Arrays.stream(Util.getOneDArray(inputs[0])).boxed().collect(Collectors.toList())
+        int n = t.shoppingOffers_2(Arrays.stream(Util.get1dIntArray(inputs[0])).boxed().collect(Collectors.toList())
                 , Util.get2DList(inputs[1], Integer.class)
-                , Arrays.stream(Util.getOneDArray(inputs[2])).boxed().collect(Collectors.toList()));
+                , Arrays.stream(Util.get1dIntArray(inputs[2])).boxed().collect(Collectors.toList()));
         Util.print(n);
     }
     @Test
@@ -63,7 +63,7 @@ public class lee6 extends LeetTests {
     @Test
     public void test666() {
         pathSum t = new pathSum();
-        Util.print(t.pathSum(Util.getOneDArray("[111,217,221,315,415]")));
+        Util.print(t.pathSum(Util.get1dIntArray("[111,217,221,315,415]")));
     }
     @Test
     public void test670() {

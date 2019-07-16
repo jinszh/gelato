@@ -74,6 +74,10 @@ public class Util {
                 print(",");
             }
             print("\n");
+        }else if(v instanceof double[]){
+            for(Object o : (double[])v){
+                print(o + " ");
+            }
         }else if(v instanceof int[]){
             for(Object o : (int[])v){
                 print(o + " ");
@@ -102,14 +106,29 @@ public class Util {
         print("\n");
     }
 
-    public static int [] getOneDArray(String s){
+    public static double [] get1dDoubleArray(String s){
+        List<Double> l = get1dList(s, Double.class);
+        return l.stream().mapToDouble(Double::doubleValue).toArray();
+    }
+
+    public static int [] get1dIntArray(String s){
+        List<Integer> l = get1dList(s, Integer.class);
+        return l.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    public static <T> List<T> get1dList(String s, Class clazz){
         String [] items = s.trim().replace("[","").replace("]", "").split("\\s*,\\s*");
-        int [] array = new int[items.length];
+        List<T> array = new ArrayList<>();
         for(int i = 0; i< items.length; i++){
-            array[i] = Integer.parseInt(items[i].trim());
+            if(clazz == Integer.class) {
+                array.add((T) (Integer)Integer.parseInt(items[i].trim()));
+            }else if(clazz == Double.class){
+                array.add((T) (Double) Double.parseDouble(items[i].trim()));
+            }
         }
         return array;
     }
+
 
     public static Integer [] getOneDIntegerArray(String s){
         String [] items = s.trim().replace("[","").replace("]", "").split("\\s*,\\s*");
@@ -123,7 +142,6 @@ public class Util {
         }
         return array;
     }
-
 
     public static String [] readFromFile(String filePath) {
         try {

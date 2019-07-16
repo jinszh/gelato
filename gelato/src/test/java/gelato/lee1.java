@@ -10,6 +10,11 @@ import java.util.LinkedList;
 
 public class lee1 extends LeetTests{
     @Test
+    public void test106(){
+        buildTree f = new buildTree();
+        Util.print(f.buildTree(Util.get1dIntArray("[1,2,3,4]"), Util.get1dIntArray("[4,3,2,1]")));
+    }
+    @Test
     public void test114(){
         flatten f = new flatten();
         TreeNode root = Util.getTestTree(Util.getOneDIntegerArray("[1,2,5,3,4,null,6]"));
@@ -49,7 +54,7 @@ public class lee1 extends LeetTests{
     @Test
     public void test152(){
         maxProduct f = new maxProduct();
-        int v = f.maxProduct(Util.getOneDArray("[-9]"));
+        int v = f.maxProduct(Util.get1dIntArray("[-9]"));
         Util.print(v);
     }
 

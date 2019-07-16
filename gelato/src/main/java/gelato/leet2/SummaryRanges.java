@@ -34,7 +34,7 @@ public class SummaryRanges {
 
     /**
      * Definition for an interval.*/
-     public class Interval {
+    private class Interval {
          int start;
          int end;
          Interval() { start = 0; end = 0; }

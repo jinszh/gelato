@@ -1,8 +1,6 @@
 package gelato;
 
-import gelato.leet10.*;
 import gelato.leet9.*;
-import gelato.model.TreeNode;
 import gelato.util.Util;
 import org.junit.Test;
 
@@ -27,7 +25,7 @@ public class lee9 extends LeetTests {
     public void test992() {
         subarraysWithKDistinct f = new subarraysWithKDistinct();
         String [] inputs = Util.readFromFile("subarraysWithKDistinct.txt");
-       // int n = f.subarraysWithKDistinct(Util.getOneDArray(inputs[0]), 1000);
+       // int n = f.subarraysWithKDistinct(Util.get1dIntArray(inputs[0]), 1000);
         int n = f.subarraysWithKDistinct(new int[]{2,1,2,1,1}, 3);
         Util.print(n);
     }
@@ -72,14 +70,14 @@ public class lee9 extends LeetTests {
     @Test
     public void test983() {
         mincostTickets f = new mincostTickets();
-        int n = f.mincostTickets(Util.getOneDArray("[1,2,3,4,5,6,7,8,9,10,30,31]"), Util.getOneDArray("[2,7,15]"));
+        int n = f.mincostTickets(Util.get1dIntArray("[1,2,3,4,5,6,7,8,9,10,30,31]"), Util.get1dIntArray("[2,7,15]"));
         Util.print(n);
     }
 
     @Test
     public void test982() {
         countTriplets f = new countTriplets();
-        int n = f.countTriplets_v2(Util.getOneDArray("[0,1,3]"));
+        int n = f.countTriplets_v2(Util.get1dIntArray("[0,1,3]"));
         Util.print(n);
     }
 
@@ -109,24 +107,24 @@ public class lee9 extends LeetTests {
     @Test
     public void test978() {
         maxTurbulenceSize f = new maxTurbulenceSize();
-        int n = f.maxTurbulenceSize(Util.getOneDArray("[9,4,2,10,7,8,8,1,9]"));
+        int n = f.maxTurbulenceSize(Util.get1dIntArray("[9,4,2,10,7,8,8,1,9]"));
         Util.print(n);
     }
 
     @Test
     public void test975() {
         oddEvenJumps f = new oddEvenJumps();
-        int n = f.oddEvenJumps_stackMethod(Util.getOneDArray("[5,1,3,4,2]"));
+        int n = f.oddEvenJumps_stackMethod(Util.get1dIntArray("[5,1,3,4,2]"));
         Util.print(n);
     }
 
     @Test
     public void test974() {
         subarraysDivByK f = new subarraysDivByK();
-        int n = f.subarraysDivByK(Util.getOneDArray("[-1,2,9]"), 2);
-       // int n = f.subarraysDivByK(Util.getOneDArray("[4,5,0,-2,-3,1]"), 5);
+        int n = f.subarraysDivByK(Util.get1dIntArray("[-1,2,9]"), 2);
+       // int n = f.subarraysDivByK(Util.get1dIntArray("[4,5,0,-2,-3,1]"), 5);
         String [] inputs = Util.readFromFile("subarraysDivByK.txt");
-        //int n = f.subarraysDivByK(Util.getOneDArray(inputs[0]), Integer.parseInt(inputs[1]));
+        //int n = f.subarraysDivByK(Util.get1dIntArray(inputs[0]), Integer.parseInt(inputs[1]));
         Util.print(n);
     }
 
@@ -151,6 +149,18 @@ public class lee9 extends LeetTests {
     }
 
     @Test
+    public void test954() {
+        canReorderDoubled f = new canReorderDoubled();
+        Util.print(f.canReorderDoubled(Util.get1dIntArray("[-2,-2,1,-2,-1,2]")));
+    }
+
+    @Test
+    public void test947() {
+        removeStones f = new removeStones();
+        Util.print(f.removeStones(Util.getTwoDMatrix("[[5,9],[9,0],[0,0],[7,0],[4,3],[8,5],[5,8],[1,1],[0,6],[7,5],[1,6],[1,9],[9,4],[2,8],[1,3],[4,2],[2,5],[4,1],[0,2],[6,5]]")));
+    }
+
+    @Test
     public void test932() {
         beautifulArray f = new beautifulArray();
         Util.print(f.beautifulArray(10));
@@ -159,12 +169,12 @@ public class lee9 extends LeetTests {
     @Test
     public void test923() {
         threeSumMulti f = new threeSumMulti();
-        Util.print(f.threeSumMulti(Util.getOneDArray("[1,1,2,2,3,3,4,4,5,5]"), 8 ));
+        Util.print(f.threeSumMulti(Util.get1dIntArray("[1,1,2,2,3,3,4,4,5,5]"), 8 ));
     }
 
     @Test
     public void test904() {
         totalFruit f = new totalFruit();
-        Util.print(f.totalFruit(Util.getOneDArray("[1,2,3,2,2]")));
+        Util.print(f.totalFruit(Util.get1dIntArray("[1,2,3,2,2]")));
     }
 }
