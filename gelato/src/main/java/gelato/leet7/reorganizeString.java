@@ -1,6 +1,6 @@
 package gelato.leet7;
 
-import javafx.util.Pair;
+import jdk.internal.util.xml.impl.Pair;
 
 import java.util.*;
 
@@ -12,15 +12,16 @@ public class reorganizeString {
         int[] counts = new int[26];
         for (char c : S.toCharArray())
             counts[c - 'a']++;
-        ArrayList<Pair<Integer, Character>> list = new ArrayList<>();
+
+        ArrayList<AbstractMap.SimpleEntry<Integer, Character>> list = new ArrayList<>();
         for (int i = 0; i < 26; i++) {
             if (counts[i] > (len + 1) / 2)
                 return "";
-            list.add(new Pair<>(counts[i], (char)(i + 'a')));
+            list.add(new AbstractMap.SimpleEntry<>(counts[i], (char)(i + 'a')));
         }
         Collections.sort(list, (a, b) -> (b.getKey() - a.getKey()));
         StringBuilder sb = new StringBuilder();
-        for (Pair<Integer, Character> pair : list) {
+        for (AbstractMap.SimpleEntry<Integer, Character> pair : list) {
             int cnt = pair.getKey();
             char c = pair.getValue();
             for (int i = 0; i < cnt; i++) {

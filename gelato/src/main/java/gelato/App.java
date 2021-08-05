@@ -17,10 +17,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        synchronized(App.class){
-
-        }
-
+        System.out.println("Classloader of this class:"
+                + App.class.getClassLoader());
 
     }
 

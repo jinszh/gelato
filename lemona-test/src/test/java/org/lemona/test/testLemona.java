@@ -1,9 +1,7 @@
 package org.lemona.test;
 
-import org.apache.http.HttpResponse;
 import org.lemona.test.httptools.ConnectionException;
 import org.lemona.test.httptools.HttpResp;
-import org.lemona.test.httptools.HttpUtil;
 import org.lemona.test.httptools.PooledHttpConnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;

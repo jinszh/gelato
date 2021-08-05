@@ -1,7 +1,6 @@
 package gelato.algos;
 
 import gelato.model.TreeNode;
-import javafx.util.Pair;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
