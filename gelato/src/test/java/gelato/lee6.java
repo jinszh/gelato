@@ -26,16 +26,26 @@ public class lee6 extends LeetTests {
         shoppingOffers t = new shoppingOffers();
         String [] inputs = Util.readFromFile("638.txt");
         //int n = t.shoppingOffers(Arrays.asList(2,5),Util.getTwoDList("[[3,0,5],[1,2,10]]"), Arrays.asList(3,2));
-        int n = t.shoppingOffers_2(Arrays.stream(Util.getOneDArray(inputs[0])).boxed().collect(Collectors.toList())
+        int n = t.shoppingOffers_2(Arrays.stream(Util.get1dIntArray(inputs[0])).boxed().collect(Collectors.toList())
                 , Util.get2DList(inputs[1], Integer.class)
-                , Arrays.stream(Util.getOneDArray(inputs[2])).boxed().collect(Collectors.toList()));
+                , Arrays.stream(Util.get1dIntArray(inputs[2])).boxed().collect(Collectors.toList()));
         Util.print(n);
+    }
+    @Test
+    public void test640() {
+        solveEquation t = new solveEquation();
+        Util.print(t.solveEquation("1+1=x"));
     }
 
     @Test
-    public void test649() {
-        predictPartyVictory t = new predictPartyVictory();
-        Util.print(t.predictPartyVictory("RDDRRDDR"));
+    public void test647() {
+        countSubstrings t = new countSubstrings();
+        Util.print(t.countSubstrings_textbook("abba"));
+    }
+    @Test
+    public void test651() {
+        maxA t = new maxA();
+        Util.print(t.maxA(7));
     }
     @Test
     public void test654() {
@@ -49,6 +59,21 @@ public class lee6 extends LeetTests {
         findClosestElements t = new findClosestElements();
         List n = t.findClosestElements_OLgN(new int[]{1,2,7,8,9}, 2, 6);
         Util.print(n);
+    }
+    @Test
+    public void test666() {
+        pathSum t = new pathSum();
+        Util.print(t.pathSum(Util.get1dIntArray("[111,217,221,315,415]")));
+    }
+    @Test
+    public void test670() {
+        maximumSwap t = new maximumSwap();
+        Util.print(t.maximumSwap(98368));
+    }
+    @Test
+    public void test678() {
+        checkValidString t = new checkValidString();
+        Util.print(t.checkValidString_dp("(((((((((((((***********))))"));
     }
 
     @Test

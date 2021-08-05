@@ -13,10 +13,26 @@ import java.text.ParseException;
 import java.util.*;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.stream.IntStream;
 
 public class Util {
     public static Long timer;
     public static ReentrantLock timerLock = new ReentrantLock();
+    public static ListNode [] getTestListNodes(int [] data){
+        ListNode [] res = new ListNode[data.length];
+        ListNode prev = null;
+        for(int i = 0 ; i< data.length; i++) {
+            if(prev == null) {
+                prev = new ListNode(data[i]);
+            }else{
+                prev.next = new ListNode(data[i]);
+                prev = prev.next;
+            }
+            res[i] = prev;
+        }
+        return res;
+    }
+
     public static ListNode getTestListNode(int [] data){
         ListNode head = null;
         ListNode prev = null;
@@ -58,6 +74,10 @@ public class Util {
                 print(",");
             }
             print("\n");
+        }else if(v instanceof double[]){
+            for(Object o : (double[])v){
+                print(o + " ");
+            }
         }else if(v instanceof int[]){
             for(Object o : (int[])v){
                 print(o + " ");
@@ -67,6 +87,15 @@ public class Util {
                 print(o);
                 print(" ; ");
             }
+        }else if(v instanceof TreeNode){
+            print(((TreeNode) v).val);
+        }else if(v instanceof  ListNode){
+            while (v != null){
+                print(((ListNode) v).val);
+                print(",");
+                v = ((ListNode) v).next;
+            }
+            println(".");
         }else{
             System.out.print(v);
         }
@@ -77,14 +106,29 @@ public class Util {
         print("\n");
     }
 
-    public static int [] getOneDArray(String s){
+    public static double [] get1dDoubleArray(String s){
+        List<Double> l = get1dList(s, Double.class);
+        return l.stream().mapToDouble(Double::doubleValue).toArray();
+    }
+
+    public static int [] get1dIntArray(String s){
+        List<Integer> l = get1dList(s, Integer.class);
+        return l.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    public static <T> List<T> get1dList(String s, Class clazz){
         String [] items = s.trim().replace("[","").replace("]", "").split("\\s*,\\s*");
-        int [] array = new int[items.length];
+        List<T> array = new ArrayList<>();
         for(int i = 0; i< items.length; i++){
-            array[i] = Integer.parseInt(items[i].trim());
+            if(clazz == Integer.class) {
+                array.add((T) (Integer)Integer.parseInt(items[i].trim()));
+            }else if(clazz == Double.class){
+                array.add((T) (Double) Double.parseDouble(items[i].trim()));
+            }
         }
         return array;
     }
+
 
     public static Integer [] getOneDIntegerArray(String s){
         String [] items = s.trim().replace("[","").replace("]", "").split("\\s*,\\s*");
@@ -98,7 +142,6 @@ public class Util {
         }
         return array;
     }
-
 
     public static String [] readFromFile(String filePath) {
         try {
@@ -134,21 +177,43 @@ public class Util {
         }
         return array;
     }
+
     public static TreeNode getTestTree(Integer [] data){
+        return getTestTree(data, null)[0];
+    }
+
+    public static TreeNode [] getTestTree(Integer [] data, Integer [] interest) {
+        if(interest == null){
+            interest = new Integer[0];
+        }
+        TreeNode [] res = new TreeNode[interest == null ? 1 : interest.length + 1];
         TreeNode root = null;
-        if(data != null && data.length > 0 && data[0] != null) {
+        if (data != null && data.length > 0 && data[0] != null) {
             root = new TreeNode(data[0]);
+            for(int i = 0 ; i< interest.length; i++){
+                if(root != null && root.val == interest[i]){
+                    res[i + 1] = root;
+                }
+            }
             Deque<TreeNode> que = new ArrayDeque<>();
             que.push(root);
             int k = 1;
-            while (k < data.length){
+            while (k < data.length) {
                 TreeNode l = data[k] == null ? null : new TreeNode(data[k]);
-                if(l != null){
+                if (l != null) {
                     que.offerLast(l);
                 }
-                TreeNode r = data[k + 1] == null ? null : new TreeNode(data[k + 1]);
-                if(r != null){
+                TreeNode r = (k + 1 == data.length || data[k + 1] == null) ? null : new TreeNode(data[k + 1]);
+                if (r != null) {
                     que.offerLast(r);
+                }
+                for(int i = 0 ; i< interest.length; i++){
+                    if(l != null && l.val == interest[i]){
+                        res[i + 1] = l;
+                    }
+                    if(r != null && r.val == interest[i]){
+                        res[i + 1] = r;
+                    }
                 }
                 TreeNode par = que.pollFirst();
                 par.left = l;
@@ -156,7 +221,8 @@ public class Util {
                 k += 2;
             }
         }
-        return root;
+        res[0] = root;
+        return res;
     }
 
     public static TreeNode getTestTreeByArray(Integer [] data) {
@@ -278,4 +344,5 @@ public class Util {
         }
         System.out.println();
     }
+
 }

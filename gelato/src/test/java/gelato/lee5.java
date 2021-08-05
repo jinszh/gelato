@@ -13,8 +13,8 @@ public class lee5 extends LeetTests {
         IPO f = new IPO();
 //        String[] paras = Util.readFromFile("IPO");
 //        int v = f.findMaximizedCapital(50000, 50000
-//                , Util.getOneDArray(paras[0]), Util.getOneDArray(paras[1]));
-        int v = f.findMaximizedCapital(2,0, Util.getOneDArray("[1,2,3]"), Util.getOneDArray("[0,1,1]"));
+//                , Util.get1dIntArray(paras[0]), Util.get1dIntArray(paras[1]));
+        int v = f.findMaximizedCapital(2,0, Util.get1dIntArray("[1,2,3]"), Util.get1dIntArray("[0,1,1]"));
         Util.print(v);
     }
 
@@ -36,7 +36,7 @@ public class lee5 extends LeetTests {
     @Test
     public void testRemoveBoxes(){
         RemoveBoxes f = new RemoveBoxes();
-        int v = f.removeBoxes(Util.getOneDArray("[3,3,4,3,4,4,4]"));
+        int v = f.removeBoxes(Util.get1dIntArray("[3,3,4,3,4,4,4]"));
         Util.print(v);
     }
 
@@ -66,7 +66,7 @@ public class lee5 extends LeetTests {
     @Test
     public void testSuperWashingMachines(){
         SuperWashingMachines f = new SuperWashingMachines();
-       int v = f.findMinMoves(Util.getOneDArray("[0,0,14,0,10,0,0,0]"));
+       int v = f.findMinMoves(Util.get1dIntArray("[0,0,14,0,10,0,0,0]"));
         Util.print(v);
     }
 
@@ -92,6 +92,12 @@ public class lee5 extends LeetTests {
     }
 
     @Test
+    public void test592(){
+        fractionAddition f = new fractionAddition();
+        Util.print(f.fractionAddition("1/3 - 1/2"));
+    }
+
+    @Test
     public void test583(){
         minDistance f = new minDistance();
         int v =f.minDistance("a", "b");
@@ -101,8 +107,14 @@ public class lee5 extends LeetTests {
     @Test
     public void test560(){
         subarraySum f = new subarraySum();
-        int v =f.subarraySum(Util.getOneDArray("[1]"), 0);
+        int v =f.subarraySum(Util.get1dIntArray("[1]"), 0);
         Util.print(v);
+    }
+
+    @Test
+    public void test553(){
+        optimalDivision f = new optimalDivision();
+        Util.print(f.optimalDivision(Util.get1dIntArray("[1000,100,10,2]")));
     }
 
     @Test
@@ -110,6 +122,12 @@ public class lee5 extends LeetTests {
         findCircleNum f = new findCircleNum();
         int v =f.findCircleNum(Util.getTwoDMatrix("[[1,1,1],[1,1,1],[1,1,1]]"));
         Util.print(v);
+    }
+
+    @Test
+    public void test544(){
+        findContestMatch f = new findContestMatch();
+        Util.print(f.findContestMatch(8));
     }
 
     @Test
@@ -123,7 +141,15 @@ public class lee5 extends LeetTests {
     @Test
     public void test525(){
         findMaxLength f = new findMaxLength();
-        int c =f.findMaxLength(Util.getOneDArray("[0,0,1,0,0,1,1]"));
+        int c =f.findMaxLength(Util.get1dIntArray("[0,0,1,0,0,1,1]"));
+        Util.print(c);
+    }
+
+    @Test
+    public void test524(){
+        findLongestWord f = new findLongestWord();
+        String c =f.findLongestWord("abpcplea"
+                , Arrays.asList(Util.get1dStr("[\"ale\",\"apple\",\"monkey\",\"plea\"]")));
         Util.print(c);
     }
 
@@ -131,7 +157,22 @@ public class lee5 extends LeetTests {
     public void test523(){
         checkSubarraySum f = new checkSubarraySum();
         String [] inputs = Util.readFromFile("523");
-        boolean c =f.checkSubarraySum(Util.getOneDArray(inputs[0]) , Integer.parseInt(inputs[1]));
+        boolean c =f.checkSubarraySum(Util.get1dIntArray(inputs[0]) , Integer.parseInt(inputs[1]));
         Util.print(c);
+    }
+
+    @Test
+    public void test516(){
+        longestPalindromeSubseq f = new longestPalindromeSubseq();
+        Util.println(f.longestPalindromeSubseq("abbabba"));
+        Util.print(f.cnt);
+    }
+
+    @Test
+    public void test505(){
+        shortestDistance f = new shortestDistance();
+        Util.print(f.shortestDistance_bfs(Util.getTwoDMatrix("[[0,0,1,0,0],[0,0,0,0,0],[0,0,0,1,0],[1,1,0,1,1],[0,0,0,0,0]]")
+                , Util.get1dIntArray("[0,4]")
+                , Util.get1dIntArray("[4,4]")));
     }
 }

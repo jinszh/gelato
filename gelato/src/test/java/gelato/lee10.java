@@ -2,11 +2,16 @@ package gelato;
 
 import gelato.leet10.*;
 import gelato.model.TreeNode;
-import gelato.util.Trie;
 import gelato.util.Util;
 import org.junit.Test;
 
 public class lee10 extends LeetTests {
+    @Test
+    public void test1040() {
+        numMovesStonesII t = new numMovesStonesII();
+        int [] n = t.numMovesStonesII(new int[]{1,20,21,24});
+        print(n);
+    }
     @Test
     public void test1020() {
         numEnclaves t = new numEnclaves();
@@ -45,7 +50,7 @@ public class lee10 extends LeetTests {
     @Test
     public void test1014() {
         maxScoreSightseeingPair t = new maxScoreSightseeingPair();
-        int n = t.maxScoreSightseeingPair(Util.getOneDArray("[8,0,7,0,0,10]"));
+        int n = t.maxScoreSightseeingPair(Util.get1dIntArray("[8,0,7,0,0,10]"));
         print(n);
     }
 
@@ -59,22 +64,22 @@ public class lee10 extends LeetTests {
     @Test
     public void test1011() {
         shipWithinDays t = new shipWithinDays();
-        int n = t.shipWithinDays(Util.getOneDArray("[1,2,3,4,5,6,7,8,9,10]"), 5);
+        int n = t.shipWithinDays(Util.get1dIntArray("[1,2,3,4,5,6,7,8,9,10]"), 5);
         print(n);
     }
 
     @Test
     public void test1008() {
         bstFromPreorder t = new bstFromPreorder();
-        TreeNode n = t.bstFromPreorder(Util.getOneDArray("[8,5,1,7,10,12]"));
+        TreeNode n = t.bstFromPreorder(Util.get1dIntArray("[8,5,1,7,10,12]"));
         print(n);
     }
 
     @Test
     public void test1007() {
         minDominoRotations t = new minDominoRotations();
-        int n = t.minDominoRotations(Util.getOneDArray("[2,1,2,4,2,2]")
-                                    ,Util.getOneDArray("[5,2,6,2,3,2]"));
+        int n = t.minDominoRotations(Util.get1dIntArray("[2,1,2,4,2,2]")
+                                    ,Util.get1dIntArray("[5,2,6,2,3,2]"));
         print(n);
     }
 

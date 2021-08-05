@@ -3,10 +3,12 @@ package gelato;
 import gelato.leet2.*;
 import gelato.leet2.shortestPalindrome;
 import gelato.leet2.ConcatenatedWords;
+import gelato.model.TreeNode;
 import gelato.util.Trie;
 import gelato.util.Util;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -18,7 +20,31 @@ public class lee2 extends LeetTests {
         boolean v = f.canWin("+++-----+++++---+++++++++++++++");
         Util.print(v);
     }
-
+    @Test
+    public void test287() {
+        findDuplicate f = new findDuplicate();
+        Util.print(f.findDuplicate3(new int[]{3, 5, 2, 1, 1, 4}));
+    }
+    @Test
+    public void test285() {
+        inorderSuccessor f = new inorderSuccessor();
+        String[] input = Util.readFromFile("285.txt");
+        TreeNode[] dt = Util.getTestTree(Util.getOneDIntegerArray(input[0]), new Integer[]{1209});
+        Util.print(f.inorderSuccessor(dt[0], dt[1]));
+    }
+    @Test
+    public void test280() {
+        wiggleSort f = new wiggleSort();
+        int  [] num = Util.get1dIntArray("[3,5,2,1,6,4]");
+        f.wiggleSort(num);
+        Util.print(num);
+    }
+    @Test
+    public void test271(){
+        Codec f = new Codec();
+        Util.print(f.encode(Arrays.asList("Hello", "World")));
+        Util.print(f.decode("2,5,5,HelloWorld"));
+    }
     @Test
     public void test267(){
         generatePalindromes f = new generatePalindromes();
@@ -40,21 +66,60 @@ public class lee2 extends LeetTests {
         Util.print(v);
     }
     @Test
+    public void test249(){
+        groupStrings f = new groupStrings();
+        Util.print(f.groupStrings(Util.get1dStr("[az,ba]")));
+    }
+    @Test
+    public void test247(){
+        findStrobogrammatic f = new findStrobogrammatic();
+        List v = f.findStrobogrammatic(2);
+        Util.print(v);
+    }
+    @Test
+    public void test241(){
+        diffWaysToCompute f = new diffWaysToCompute();
+        List v = f.diffWaysToCompute("2*3-4*5");
+        Util.print(v);
+    }
+    @Test
     public void test238(){
         productExceptSelf f = new productExceptSelf();
-        int [] v = f.productExceptSelf_fast(Util.getOneDArray("[1,2,3,4]"));
+        int [] v = f.productExceptSelf_fast(Util.get1dIntArray("[1,2,3,4]"));
         Util.print(v);
+    }
+    @Test
+    public void test228() {
+        summaryRanges228 f = new summaryRanges228();
+        List v = f.summaryRanges(Util.get1dIntArray("[-2,-1,1,2,2147483646,2147483647]"));
+        Util.print(v);
+    }
+    @Test
+    public void test227() {
+        BasicCalculatorII f = new BasicCalculatorII();
+        Util.print(f.calculate(" 2 * 3 + 4"));
+    }
+    @Test
+    public void test220() {
+        containsNearbyAlmostDuplicate f = new containsNearbyAlmostDuplicate();
+        Util.print(f.containsNearbyAlmostDuplicate(Util.get1dIntArray("[1,4,8,1,2]"), 3, 1));
     }
     @Test
     public void test215() {
         findKthLargest f = new findKthLargest();
-        int v = f.findKthLargest_par(Util.getOneDArray("[3,2,3,1,2,4,5,5,6,7,7,8,2,3,1,1,1,10,11,5,6,2,4,7,8,5,6]"), 20);
+        int v = f.findKthLargest_par(Util.get1dIntArray("[3,2,3,1,2,4,5,5,6,7,7,8,2,3,1,1,1,10,11,5,6,2,4,7,8,5,6]"), 20);
         Util.print(v);
+    }
+    @Test
+    public void test211(){
+        WordDictionary f = new WordDictionary();
+        f.addWord("ab");
+        Util.println(f.search("ab"));
     }
     @Test
     public void test209(){
         minSubArrayLen f = new minSubArrayLen();
-        int v = f.minSubArrayLen(4, Util.getOneDArray("[1,4,4]"));
+        int v = f.minSubArrayLen(4, Util.get1dIntArray("[1,4,4]"));
         Util.print(v);
     }
     @Test
@@ -88,7 +153,7 @@ public class lee2 extends LeetTests {
     @Test
     public void testArithmeticSlices() {
         ArithmeticSlices f = new ArithmeticSlices();
-        int v = f.numberOfArithmeticSlices(Util.getOneDArray("[1,3,3,5,7,9]"));
+        int v = f.numberOfArithmeticSlices(Util.get1dIntArray("[1,3,3,5,7,9]"));
         Util.print(v);
     }
 
@@ -254,7 +319,7 @@ public class lee2 extends LeetTests {
     @Test
     public void testMaxNumFrom2Array() {
         MaxNumFrom2Array f = new MaxNumFrom2Array();
-        int [] s = f.maxNumber(Util.getOneDArray("[8,3,9]"), Util.getOneDArray("[8,3,6,9]"), 4);
+        int [] s = f.maxNumber(Util.get1dIntArray("[8,3,9]"), Util.get1dIntArray("[8,3,6,9]"), 4);
         Util.print(s);
     }
 
@@ -334,7 +399,7 @@ public class lee2 extends LeetTests {
     @Test
     public void testFrogJump() {
         FrogJump f = new FrogJump();
-        boolean s = f.canCross(Util.getOneDArray("[0,1,2,3,4,8,9,11]"));
+        boolean s = f.canCross(Util.get1dIntArray("[0,1,2,3,4,8,9,11]"));
         Util.print(s);
     }
 
@@ -352,7 +417,7 @@ public class lee2 extends LeetTests {
     @Test
     public void testSplitArrayLargestSum() {
         SplitArrayLargestSum f = new SplitArrayLargestSum();
-        int s = f.splitArray(Util.getOneDArray("[7,2,5,10,8]"), 3);
+        int s = f.splitArray(Util.get1dIntArray("[7,2,5,10,8]"), 3);
         Util.print(s);
     }
 
@@ -381,8 +446,8 @@ public class lee2 extends LeetTests {
     public void testMazeIII() {
         MazeIII f = new MazeIII();
         String res = f.findShortestWay(Util.getTwoDMatrix("[[0,0,0,0,0],[1,1,0,0,1],[0,0,0,0,0],[0,1,0,0,1],[0,1,0,0,0]]")
-                ,Util.getOneDArray("[4,3]")
-                ,Util.getOneDArray("[0,1]"));
+                ,Util.get1dIntArray("[4,3]")
+                ,Util.get1dIntArray("[0,1]"));
         Util.print(res);
     }
 

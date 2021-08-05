@@ -1,15 +1,29 @@
 package gelato;
 
 import gelato.leet0.*;
+import gelato.leet0.uniquePaths;
 import gelato.util.Util;
 import org.junit.Test;
 
 public class lee0 extends LeetTests{
     @Test
+    public void test006() {
+        ZigZagConversion f = new ZigZagConversion();
+        Util.print(f.convert("Paypal", 3));
+    }
+
+    @Test
     public void test018() {
         fourSum f = new fourSum();
         Util.print(f.fourSum(new int[]{0,3,4,-2,-1,3,3,3,1}, 2));
     }
+
+    @Test
+    public void test029() {
+        divide f = new divide();
+        Util.print(f.divide(Integer.MIN_VALUE, Integer.MIN_VALUE));
+    }
+
     @Test
     public void test031() {
         nextPermutation f = new nextPermutation();
@@ -25,7 +39,11 @@ public class lee0 extends LeetTests{
         combinationSum f = new combinationSum();
         Util.print(f.combinationSum(new int[]{2, 3, 7}, 7));
     }
-
+    @Test
+    public void test043() {
+        multiplyBigNumber f = new multiplyBigNumber();
+        Util.print(f.multiply("1000", "99"));
+    }
     @Test
     public void test056(){
         merge f = new merge();
@@ -44,9 +62,31 @@ public class lee0 extends LeetTests{
         Util.print(f.getPermutation(4,9));
     }
     @Test
+    public void test062(){
+        uniquePaths f = new uniquePaths();
+        Util.print(f.uniquePaths(3,2));
+    }
+    @Test
+    public void test063(){
+        uniquePathsWithObstacles f = new uniquePathsWithObstacles();
+        Util.print(f.uniquePathsWithObstacles(Util.getTwoDMatrix("[[0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0],[1,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1],[0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0],[0,0,0,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0],[1,0,1,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0],[0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0],[0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0],[1,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1],[0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0],[0,1,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0],[0,1,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,1],[1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0],[0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,1],[0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,1],[1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0]]\n")));
+    }
+    @Test
+    public void test071(){
+        simplifyPath f = new simplifyPath();
+        Util.print(f.simplifyPath("/a//b////c/d//././/.."));
+    }
+    @Test
     public void test072(){
         minDistance f = new minDistance();
         Util.print(f.minDistance("intention", "execution"));
+    }
+    @Test
+    public void test075(){
+        sortColors f = new sortColors();
+        int [] nums = new int[]{0,0,0,1,1,1};
+        f.sortColors(nums);
+        Util.print(nums);
     }
     @Test
     public void test079(){
@@ -55,6 +95,13 @@ public class lee0 extends LeetTests{
                 ,"baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
         Util.print(f.cnt);
     }
+
+    @Test
+    public void test080(){
+        removeDuplicates f = new removeDuplicates();
+        Util.print(f.removeDuplicates(new int[]{2,2,2,1,1,3}));
+    }
+
     @Test
     public void test081(){
         SearchRotatedSortedArrayII f = new SearchRotatedSortedArrayII();

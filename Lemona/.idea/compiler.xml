@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="lemona-spring-boot" />
+        <module name="Lemona" />
+        <module name="lemona" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="lemona-spring-boot" target="1.8" />
+    <bytecodeTargetLevel target="8">
+      <module name="lemona" target="1.8" />
+      <module name="Lemona" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
